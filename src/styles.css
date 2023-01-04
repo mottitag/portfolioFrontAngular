@@ -1,1 +1,255 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #ffffff;
+    --color-base: #21043d;
+    --color-base2: #15151b;
+    --color-brand: #c51c1c;
+    --color-brand2: #690776;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+/* se cambia el color del fondo del body, la fuente */
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+/* se cambian el tamano de los titulos y el color */
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+/* se cambia el color de los vinculos y se le agrega una transicion */
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+/* cuando se seleccion el vinculo cambia de color */
+a:hover {
+    color: var(--color-brand);
+}
+
+/* para tener imagenes responsivas */
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+/* se crea esta clase para que el contenido principal posea espacio entre cada uno de los contenedores se la seccion...
+el contenido quede centrado y dividido en columnas las secciones */
+.full-heigth {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid var(--color-heading);
+}
+
+/*efecto de sombras en las cajas en la seccion de servicios */
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-heading);
+    color: var(--color-brand);
+}
+
+/* BARRA DE NAVEGACION */
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+/* Esto es para que quede resaltada la seccion en el navbar, en la posicion actual */
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+
+/* se le agrega una imagen y se le setean los tamanos */
+@media (min-width: 992px){
+
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background-image: url(../src/assets/img/img_sidebar.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .navbar-brand img {
+        border: 8px solid var(--color-brand);
+    }
+
+    /* CONTENIDO PRINCIPAL */
+    #content-wrapper {
+        /* esto es para que el contenido principal se muestre al lado del menu y no quede detras del mismo. */
+        padding-left: var(--sidbar-width);
+    }
+}
+
+/* BOTON DEL HOME */
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--font-base);
+}
+
+.btn-brand:hover, .btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+/* link del celular en home */
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* CARD-CUSTOM */
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+/* CONTACTO */
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact imput.form-control{
+    height: 44px;
+}
+
+/* SKILLS */
+
+.outer{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+#skill_html {
+    font-weight: 600;
+    color: #555;
+}
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
