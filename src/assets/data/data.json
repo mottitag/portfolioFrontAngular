@@ -1,0 +1,40 @@
+{
+    "nav": {
+        "name": "Gabriel Motta",
+        "foto_perfil": "./assets/img/Img_Mottita.jpeg"
+    },
+    "home": {
+        "title": "Hola soy Programador Full Stack Jr. y Analista en Sistemas de Posadas, Misiones (Argentina).",
+        "description": "Hola, soy Gabriel Motta y realizo paginas web responsivas Front End y Back End.",
+        "phone": "(54) 376-4576996"
+    },
+    "education": [{
+        "school": "Universidad Gastón Dachary",
+        "title": "Analista en Sistemas",
+        "start": "2003",
+        "end": "2008",
+        "description": "Creación de sistemas informáticos a medida."
+    },
+    {
+        "school": "Instituto Sagrada Familia",
+        "title": "Educación polimodal.",
+        "start": "1998",
+        "end": "2002",
+        "description": "Educación polimodal en la modalidad de ciencias naturales."
+    }
+    ],
+    "experiences": [{
+        "name": "Direccion Nacional de Migraciones.",
+        "position": "Técnico informático",
+        "start": "2013",
+        "end": "Actualidad",
+        "description": "Soporte Tecnico, redes informáticas, instalación, configuraciones y mantenimiento de equipos informáticos."
+    },
+    {
+        "name": "Parque centro del conocimiento.",
+        "position": "Técnico informático",
+        "start": "2009",
+        "end": "2013",
+        "description": "Soporte Tecnico, redes informáticas, instalación, configuraciones y mantenimiento de serviores."
+    }]
+}

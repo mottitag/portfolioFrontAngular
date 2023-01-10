@@ -1,0 +1,49 @@
+<section id="about" class="full-heigth px-lg-5">
+    <div class="container">
+
+        <div class="row pb-4" data-aos="fade-up">
+            <div class="col-lg-8">
+                <h6 class="text-brand">ACERCA DE MI</h6>
+                <h1>Educación y Experiencia.</h1>
+            </div>
+        </div>
+
+        <div class="row gy-5">
+            <div class="col-lg-6">
+                <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Educación</h3>
+                <div class="row gy-4" *ngFor="let edu of eduList">
+
+                    <div class="col-12" data-aos="fade-up-right" data-aos-delay="600">
+                        <div class="bg-base p-4 rounded-4 shadow-effect">
+                            <h4>{{edu.title}}</h4>
+                            <p class="text-brand mb-2">{{edu.school}} ({{edu.start}}-{{edu.end}})</p>
+                            <p class="mb-0">{{edu.description}}.</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Experiencia</h3>
+                <div class="row gy-4" *ngFor="let exp of expList">
+
+                    <div class="col-12" data-aos="fade-up-left" data-aos-delay="700">
+                        <div class="bg-base p-4 rounded-4 shadow-effect">
+                            <h4>{{exp.name}}</h4>
+                            <p class="text-brand mb-2">{{exp.position}} ({{exp.start}}-{{exp.end}})</p>
+                            <p class="mb-0">{{exp.description}}</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

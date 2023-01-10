@@ -231,6 +231,10 @@ circle{
     stroke-width: 20px;
 }
 
+.skills_div {
+    position: relative;
+}
+
 svg{
     position: absolute;
     top: 0;
@@ -239,8 +243,11 @@ svg{
 }
 
 /* SOCIAL ICONS */
-.social-icons {
-
+.social-icon_footer {
+    color: #c51c1c;
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
 
 .social-icons a {
@@ -249,6 +256,7 @@ svg{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     background-color: var(--color-base);
     border-radius: 100px;
     font-size: 24px;

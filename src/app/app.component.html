@@ -1,252 +1,29 @@
+<!-- BARRA DE NAVEGACION LATERAL BOOTSTRAP 5 -->
+<app-navigator></app-navigator>
+<!-- //BARRA DE NAVEGACION LATERAL BOOSTRAP 5 -->
+<!-- CONTENIDO PRINCIPAL -->
+<div id="content-wrapper">
 
-  <!-- BARRA DE NAVEGACION LATERAL BOOTSTRAP 5 -->
-  <!-- Se cambia el fondo de la varra y se le agrega fixed-top para que el contenido principal no continue debajo de la barra-->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <!-- se agrega el atributo flex para cambiar la barra de navegacion a vertical -->
-    <div class="container flex-lg-column">
-      <a href="#" id="btn-edit-foto" class="btn btn-brand d-none d-lg-block" data-aos="fade-up">
-        <fa-icon [icon]="faPen"></fa-icon>
-      </a>
-      <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
-        <!-- se agrega d-lg-non para esconder el nombre en dispositios largos y d-block para que se muestre en dispositivos pequenos-->
-        <span class="h3 fw-bold d-block d-lg-none">Gabriel Motta</span>
-        <img src="./assets/img/Img_Mottita.jpeg" id="foto-perfil" class="d-none d-lg-block rounded-circle" alt="">
-      </a>
-      <input type="file" id="input-foto-perfil" class="d-none">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- se agrega el atributo flex para cambiar la direccion de los items de navegacion a vertical -->
-        <!-- se agrega el atributo text para cambiar la alineacion de las letras -->
-        <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#proyects">Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">Acerca de</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Habilidades</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#login">Login</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- //BARRA DE NAVEGACION LATERAL BOOSTRAP 5 -->
+  <!-- INICIO -->
+  <app-home></app-home>
+  <!-- //INICIO -->
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <div id="content-wrapper">
+  <!-- WORK-->
+  <app-project></app-project>  
+  <!-- //WORK -->
 
-    <!-- INICIO -->
-    <section id="home" class="full-heigth px-lg-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10">
-            <a href="#" id="btn-edit-home-h1" class="btn btn-brand" data-aos="fade-up">
-              <fa-icon [icon]="faPen"></fa-icon>
-            </a>
-            <h1 id="home_h1" class="display-4 fw-bold" data-aos="fade-up">Hola soy <span class="text-brand">Programador Full Stack
-                Jr. y Analista en
-                Sistemas</span> de Posadas, Misiones (Argentina).
-            </h1>
-            <a href="#" id="btn-edit-home-p" class="btn btn-brand" data-aos="fade-up" data-aos-delay="300">
-              <fa-icon [icon]="faPen"></fa-icon>
-            </a>
-            <p id="home_parrafo" class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">Hola, soy Gabriel Motta y realizo paginas
-              web responsivas Front End y Back End.
-            </p>
-            <div data-aos="fade-up" data-aos-delay="600">
-              <a href="#proyects" class="btn btn-brand me-3">Explore mis tabajos</a>
-              <a href="#" class="link-custom">Comuniquese: (54) 376-4576996</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- //INICIO -->
+  <!-- ABOUT -->
+  <app-about></app-about>
+  <!-- //ABOUT -->
 
-    <!-- WORK-->
-    <section id="proyects" class="full-heigth px-lg-5">
-      <div class="container">
-
-        <div class="row pb-4" data-aos="fade-up">
-          <div class="col-lg-8">
-            <h6 class="text-brand">PROYECTOS</h6>
-            <h1>Mis proyectos recientes.</h1>
-          </div>
-        </div>
-
-        <div class="row py-4">
-          <div class="col-md-6" data-aos="fade-up">
-            <div class="card-custom rounded-4 bg-base shadow-effect">
-              <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="./assets/img/img_banner.jpg" alt="">
-              </div>
-              <div class="card-custom-content p-4">
-                <h4>Mi portfolio web.</h4>
-                <p>Creacion de mi propiop portfolio web full stack, utilizando tecnologia HTML5, CSS, JS, ANGULAR, GIT,
-                  GITHUB, GITFLOW, SCRUM, JAVA SPRING BOOT, MYSQL y seguridad JWT.</p>
-                <a href="#" class="link-custom">Conosca más</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-custom rounded-4 bg-base shadow-effect">
-              <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="./assets/img/img_banner.jpg" alt="">
-              </div>
-              <div class="card-custom-content p-4">
-                <h4>Mi portfolio web.</h4>
-                <p>Creacion de mi propiop portfolio web full stack, utilizando tecnologia HTML5, CSS, JS, ANGULAR, GIT,
-                  GITHUB, GITFLOW, SCRUM, JAVA SPRING BOOT, MYSQL y seguridad JWT.</p>
-                <a href="#" class="link-custom">Conosca más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- //WORK -->
-
-    <!-- ABOUT -->
-    <section id="about" class="full-heigth px-lg-5">
-      <div class="container">
-
-        <div class="row pb-4" data-aos="fade-up">
-          <div class="col-lg-8">
-            <h6 class="text-brand">ACERCA DE MI</h6>
-            <h1>Educación y Experiencia.</h1>
-          </div>
-        </div>
-
-        <div class="row gy-5">
-          <div class="col-lg-6">
-
-            <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Educación</h3>
-            <div class="row gy-4">
-
-              <div class="col-12" data-aos="fade-up-right" data-aos-delay="600">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4>Analista en Sistemas.</h4>
-                  <p class="text-brand mb-2">Universidad Gastón Dachary (2003-2008)</p>
-                  <p class="mb-0">Creación de sistemas informáticos a medida.</p>
-                </div>
-              </div>
-
-              <div class="col-12" data-aos="fade-up-right" data-aos-delay="600">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4>Educación polimodal.</h4>
-                  <p class="text-brand mb-2">Instituto Sagrada Familia (1998-2002)</p>
-                  <p class="mb-0">Educación polimodal en la modalidad de ciencias naturales.</p>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Experiencia</h3>
-            <div class="row gy-4">
-
-              <div class="col-12" data-aos="fade-up-left" data-aos-delay="700">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4>Direccion Nacional de Migraciones.</h4>
-                  <p class="text-brand mb-2">Técnico informático (2013-actualidad)</p>
-                  <p class="mb-0">Soporte Tecnico, redes informáticas, instalación, configuraciones y mantenimiento de equipos informáticos.</p>
-                </div>
-              </div>
-
-              <div class="col-12" data-aos="fade-up-left" data-aos-delay="700">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4>Parque centro del conocimiento.</h4>
-                  <p class="text-brand mb-2">Técnico informático (2009-2013)</p>
-                  <p class="mb-0">Soporte Tecnico, redes informáticas, instalación, configuraciones y mantenimiento de serviores.</p>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <!-- //ABOUT -->
-
-    <!-- SERVICIOS -->
-    <section id="services" class="full-heigth px-lg-5">
-      <div class="container">
-
-        <div class="row pb-4" data-aos="fade-up">
-          <div class="col-lg-8">
-            <h6 class="text-brand">SERVICIOS</h6>
-            <h1>Servicios que ofresco</h1>
-          </div>
-        </div>
-
-        <div class="row py-4">
-
-          <div class="col-md-4 mt-2" data-aos="fade-up">
-            <div class="services p-4 bg-base rounded-4 shadow-effect">
-              <div class="iconbox rounded-4">
-                <i class="las la-laptop-code"></i>
-              </div>
-              <h5 class="mt-4 mb-2">Diseno Web</h5>
-              <p>Realizo disenos web Front End intuitivos y responsivos para que se adapten a cualquier dispositivos</p>
-              <a href="#" class="link-custom">Conozca más</a>
-            </div>
-          </div>
-
-          <div class="col-md-4 mt-2" data-aos="fade-up" data-aos-delay="300">
-            <div class="services p-4 bg-base rounded-4 shadow-effect">
-              <div class="iconbox rounded-4">
-                <i class="las la-feather"></i>
-              </div>
-              <h5 class="mt-4 mb-2">Diseno Web</h5>
-              <p>Realizo disenos web Front End intuitivos y responsivos para que se adapten a cualquier dispositivos</p>
-              <a href="#" class="link-custom">Conozca más</a>
-            </div>
-          </div>
-
-          <div class="col-md-4 mt-2" data-aos="fade-up" data-aos-delay="600">
-            <div class="services p-4 bg-base rounded-4 shadow-effect">
-              <div class="iconbox rounded-4">
-                <i class="las la-feather"></i>
-              </div>
-              <h5 class="mt-4 mb-2">Diseno Web</h5>
-              <p>Realizo disenos web Front End intuitivos y responsivos para que se adapten a cualquier dispositivos</p>
-              <a href="#" class="link-custom">Conozca más</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- //SERVICIOS -->
+  <!-- SERVICIOS -->
+  <app-services></app-services>
+  <!-- //SERVICIOS -->
 
     <!-- HABILIDADES -->
     <section id="skills" class="full-heigth px-lg-5">
       <div class="container">
-        <div class="row pb-4">
+        <div class="skills_div row pb-4">
 
           <div class="col-md-4">
             <div class="outer">
@@ -289,58 +66,12 @@
     <!-- //HABILIDADES -->
 
     <!-- CONTACTO-->
-    <section id="contact" class="full-heigth px-lg-5">
-      <div class="container">
-
-        <div class="row justify-content-center text-center" data-aos="fade-up">
-          <div class="col-lg-8 pb-4" data-aos="fade-up">
-            <h6 class="text-brand">CONTACTO</h6>
-            <h1>Estas interesado en trabajar juntos? Hablemos!!</h1>
-          </div>
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
-            <form action="#" class="row g-lg-3 gy-3">
-              <div class="form-group col-md-6">
-                <input type="text" class="form-control" placeholder="Nombre">
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" placeholder="e-mail">
-              </div>
-              <div class="form-group col-12">
-                <input type="text" class="form-control" placeholder="Motivo">
-              </div>
-              <div class="form-group col-12">
-                <textarea name=""  rows="4" class="form-control" placeholder="Mensaje"></textarea>
-              </div>
-              <div class="form-group col-12 d-grid">
-                <button type="submit"  class="btn btn-brand">Enviar</button>
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
+    <app-contact></app-contact>
     <!-- //CONTACTO -->
 
     <!-- FOOTER -->
-      <footer class="py-5 px-lg-5">
-        <div class="container">
-          <div class="row gy-4 justify-content-between">
-            <div class="col-auto">
-              <p class="mb-0">Copyrigth mottitag</p>
-            </div>
-            <div class="col-auto">
-              <div class="social-icons">
-                <a href=""><i class="lab la-github"></i></a>
-                <a href=""><i class="lab la-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+    <app-footer></app-footer>
     <!-- //fOOTER -->
 
-  </div>
-  <!-- //CONTENIDO PRINCIPAL -->
+</div>
+<!-- //CONTENIDO PRINCIPAL -->

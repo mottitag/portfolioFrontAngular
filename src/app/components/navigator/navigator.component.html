@@ -1,0 +1,46 @@
+<!-- Se cambia el fondo de la varra y se le agrega fixed-top para que el contenido principal no continue debajo de la barra-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- se agrega el atributo flex para cambiar la barra de navegacion a vertical -->
+    <div class="container flex-lg-column">
+        <a href="#" id="btn-edit-foto" class="btn btn-brand d-none d-lg-block" data-aos="fade-up">
+            <fa-icon class="navbar_modify-icon" [icon]="faPen"></fa-icon>
+        </a>
+        <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
+            <!-- se agrega d-lg-non para esconder el nombre en dispositios largos y d-block para que se muestre en dispositivos pequenos-->
+            <span class="h3 fw-bold d-block d-lg-none">{{dataNav.nav.name}}</span>
+            <img [src]="dataNav.nav.foto_perfil" id="foto-perfil" class="d-none d-lg-block rounded-circle" alt="">
+        </a>
+        <input type="file" id="input-foto-perfil" class="d-none">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- se agrega el atributo flex para cambiar la direccion de los items de navegacion a vertical -->
+            <!-- se agrega el atributo text para cambiar la alineacion de las letras -->
+            <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#proyects">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
