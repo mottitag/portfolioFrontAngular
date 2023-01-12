@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 // Font awesome
-import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { faPen, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigator',
@@ -13,7 +13,10 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavigatorComponent implements OnInit {
   faPen = faPen;
-  dataNav:any;
+  faCheck = faCheck;
+  inputDisplay:string = "none";
+  img = '';
+  dataNav: any;
   
   constructor(private dataPortfolio:PortfolioService){
 
@@ -23,6 +26,32 @@ export class NavigatorComponent implements OnInit {
     this.dataPortfolio.getData().subscribe(data => {
       console.log(data);
       this.dataNav = data;
+      this.img = data.nav.foto_perfil;
     });
   }
+
+  editPhoto(){
+    this.inputDisplay = "block";
+  }
+
+  closeFile () {
+    this.inputDisplay = "none";
+  }
+
+  changePhoto(event: any): void {
+    const selectedFiles: FileList = event.target.files;
+    if (selectedFiles){
+      const file: File | null = selectedFiles[0];
+
+      if (file) {
+        const currentFile = file;
+        const reader = new FileReader();
+        reader.onload = (e:any) => {
+          this.img = e.target.result;
+        };
+        reader.readAsDataURL(currentFile);
+      }
+    }
+  }
+
 }

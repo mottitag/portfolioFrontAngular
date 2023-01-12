@@ -1,4 +1,49 @@
-.navbar_modify-icon {
-    position: absolute;
-    color: red;
+.navbar_abm-btn {
+    display: inline-flex;
 }
+.navbar_modify-icon {
+    position: relative;
+    color: #ffffff;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.navbar_modify-icon:hover {
+    color: var(--color-brand);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+/* cuando se seleccion el vinculo cambia de color */
+a:hover {
+    color: var(--color-brand);
+}
+
+/* para tener imagenes responsivas */
+img {
+    width: 100%;
+}
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+/* Esto es para que quede resaltada la seccion en el navbar, en la posicion actual */
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+

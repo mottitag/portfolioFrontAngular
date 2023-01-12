@@ -1,0 +1,69 @@
+.home_ABM {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_ABM-btn {
+    position: relative;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.home_ABM-btn:hover{
+    color: var(--color-brand);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+/* cuando se seleccion el vinculo cambia de color */
+a:hover {
+    color: var(--color-brand);
+}
+
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--font-base);
+}
+
+.btn-brand:hover, .btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+/* link del celular en home */
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}

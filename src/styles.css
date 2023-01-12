@@ -12,7 +12,7 @@
 }
 
 /* se cambia el color del fondo del body, la fuente */
-body {
+#content-wrapper {
     background-color: var(--color-base2);
     color: var(--color-body);
     font-family: var(--font-base), sans-serif;
@@ -121,6 +121,9 @@ el contenido quede centrado y dividido en columnas las secciones */
     #content-wrapper {
         /* esto es para que el contenido principal se muestre al lado del menu y no quede detras del mismo. */
         padding-left: var(--sidbar-width);
+        background-color: var(--color-base2);
+        color: var(--color-body);
+        font-family: var(--font-base), sans-serif;
     }
 }
 

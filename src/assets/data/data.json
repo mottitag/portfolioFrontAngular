@@ -11,6 +11,7 @@
     "education": [{
         "school": "Universidad Gastón Dachary",
         "title": "Analista en Sistemas",
+        "logo": "https://ugd.edu.ar/images/logougd.png",
         "start": "2003",
         "end": "2008",
         "description": "Creación de sistemas informáticos a medida."
@@ -18,6 +19,7 @@
     {
         "school": "Instituto Sagrada Familia",
         "title": "Educación polimodal.",
+        "logo": "https://institutosagradafamilia.edu.ar/images/logo-mobile.png",
         "start": "1998",
         "end": "2002",
         "description": "Educación polimodal en la modalidad de ciencias naturales."
@@ -26,6 +28,7 @@
     "experiences": [{
         "name": "Direccion Nacional de Migraciones.",
         "position": "Técnico informático",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Logo_Migraciones.jpg",
         "start": "2013",
         "end": "Actualidad",
         "description": "Soporte Tecnico, redes informáticas, instalación, configuraciones y mantenimiento de equipos informáticos."
@@ -33,6 +36,7 @@
     {
         "name": "Parque centro del conocimiento.",
         "position": "Técnico informático",
+        "logo": "https://www.parquedelconocimiento.com/images/logo-mobil-2020-2.png",
         "start": "2009",
         "end": "2013",
         "description": "Soporte Tecnico, redes informáticas, instalación, configuraciones y mantenimiento de serviores."

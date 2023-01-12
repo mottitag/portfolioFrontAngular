@@ -10,11 +10,12 @@
 
         <div class="row gy-5">
             <div class="col-lg-6">
-                <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Educación</h3>
+                <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Educación <fa-icon class="about_ABM-btn" [icon]="faPlus"></fa-icon></h3>
                 <div class="row gy-4" *ngFor="let edu of eduList">
 
                     <div class="col-12" data-aos="fade-up-right" data-aos-delay="600">
-                        <div class="bg-base p-4 rounded-4 shadow-effect">
+                        <div class="bg-base mb-4 p-4 rounded-4 shadow-effect">
+                            <img class="edu-img" [src]="edu.logo" alt="">
                             <h4>{{edu.title}}</h4>
                             <p class="text-brand mb-2">{{edu.school}} ({{edu.start}}-{{edu.end}})</p>
                             <p class="mb-0">{{edu.description}}.</p>
@@ -28,11 +29,12 @@
 
             <div class="col-lg-6">
 
-                <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Experiencia</h3>
+                <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Experiencia <fa-icon class="about_ABM-btn" [icon]="faPlus"></fa-icon></h3>
                 <div class="row gy-4" *ngFor="let exp of expList">
 
                     <div class="col-12" data-aos="fade-up-left" data-aos-delay="700">
-                        <div class="bg-base p-4 rounded-4 shadow-effect">
+                        <div class="bg-base mb-4 p-4 rounded-4 shadow-effect">
+                            <img class="exp-img" [src]="exp.logo" alt="">
                             <h4>{{exp.name}}</h4>
                             <p class="text-brand mb-2">{{exp.position}} ({{exp.start}}-{{exp.end}})</p>
                             <p class="mb-0">{{exp.description}}</p>

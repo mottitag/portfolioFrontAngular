@@ -2,15 +2,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <!-- se agrega el atributo flex para cambiar la barra de navegacion a vertical -->
     <div class="container flex-lg-column">
-        <a href="#" id="btn-edit-foto" class="btn btn-brand d-none d-lg-block" data-aos="fade-up">
-            <fa-icon class="navbar_modify-icon" [icon]="faPen"></fa-icon>
-        </a>
+        <div class="navbar_abm-btn d-none d-lg-block">
+            <fa-icon class="navbar_modify-icon" [icon]="faPen" (click)="editPhoto()"></fa-icon>
+            <fa-icon class="navbar_modify-icon" [icon]="faCheck" (click)="closeFile()" ></fa-icon>
+        </div>
         <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
             <!-- se agrega d-lg-non para esconder el nombre en dispositios largos y d-block para que se muestre en dispositivos pequenos-->
             <span class="h3 fw-bold d-block d-lg-none">{{dataNav.nav.name}}</span>
-            <img [src]="dataNav.nav.foto_perfil" id="foto-perfil" class="d-none d-lg-block rounded-circle" alt="">
+            <img [src]="img" id="foto-perfil" class="d-none d-lg-block rounded-circle" alt="">
         </a>
-        <input type="file" id="input-foto-perfil" class="d-none">
+        <input type="file" accept="image/*" id="input-foto-perfil" (change)="changePhoto($event)" [ngStyle]="{'display': inputDisplay}">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

@@ -1,0 +1,18 @@
+.edu-img {
+    width: 70px;
+}
+
+.exp-img {
+    width: 70px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+.about_ABM-btn {
+    position: relative;
+    padding: 12px;
+    cursor: pointer;
+}

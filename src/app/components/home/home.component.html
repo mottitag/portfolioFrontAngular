@@ -2,23 +2,28 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10">
-                <a href="#" id="btn-edit-home-h1" class="btn btn-brand" data-aos="fade-up">
-                    <fa-icon [icon]="faPen"></fa-icon>
-                </a>
-                <h1 id="home_h1" class="display-4 fw-bold" data-aos="fade-up">
-                    Hola soy <span class="text-brand">Programador Full Stack
-                    Jr. y Analista en
-                    Sistemas</span> de Posadas, Misiones (Argentina).
+                <div class="home_ABM" data-aos="fade-up">
+                    <fa-icon class="home_ABM-btn" (click)="editH1()" [icon]="faPen"></fa-icon>
+                    <fa-icon class="home_ABM-btn" (click)="closeEditH1()"  [icon]="faCheck"></fa-icon>
+                </div>
+                <h1 id="home_h1" class="display-4 fw-bold"  data-aos="fade-up">
+                    <span #title class="text-brand">{{dataHome.home.title}}</span>
                 </h1>
-                <a href="#" id="btn-edit-home-p" class="btn btn-brand" data-aos="fade-up" data-aos-delay="300">
-                    <fa-icon [icon]="faPen"></fa-icon>
-                </a>
-                <p id="home_parrafo" class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">Hola, soy Gabriel Motta y realizo paginas
-                    web responsivas Front End y Back End.
+                <div class="home_ABM" data-aos="fade-up" data-aos-delay="300">
+                    <fa-icon class="home_ABM-btn" (click)="editP()" [icon]="faPen"></fa-icon>
+                    <fa-icon class="home_ABM-btn" (click)="closeEditP()" [icon]="faCheck"></fa-icon>
+                </div>
+                <p #paragraph id="home_parrafo" class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">{{dataHome.home.description}}
                 </p>
                 <div data-aos="fade-up" data-aos-delay="600">
                     <a href="#proyects" class="btn btn-brand me-3">Explore mis tabajos</a>
-                    <a href="#" class="link-custom">Comuniquese: (54) 376-4576996</a>
+                    <a href="#" #phone class="link-custom">
+                        Comuniquese: {{dataHome.home.phone}}
+                    </a>
+                    <div class="home_ABM">
+                        <fa-icon class="home_ABM-btn" (click)="editPhone()" [icon]="faPen"></fa-icon>
+                        <fa-icon class="home_ABM-btn" (click)="closeEditPhone()" [icon]="faCheck"></fa-icon>
+                    </div>
                 </div>
             </div>
         </div>
