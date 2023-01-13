@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 
+import { home } from '../../portfolio'
+
 // font awesome
 import { faPen, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioService } from 'src/app/services/portfolio.service';
@@ -10,20 +12,20 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  @ViewChild('title', {static: true}) title: ElementRef;
-  @ViewChild('paragraph', {static: true}) paragraph: ElementRef;
-  @ViewChild('phone', {static: true}) phone: ElementRef;
+  @ViewChild('title', {static: true}) public title!: ElementRef;
+  @ViewChild('paragraph', {static: true}) public paragraph!: ElementRef;
+  @ViewChild('phone', {static: true}) public phone!: ElementRef;
   
   faPen = faPen;
   faCheck = faCheck;
-  dataHome:any;
+  dataHome!:home;
 
   constructor (private dataPortfolio: PortfolioService, private renderer2: Renderer2) {
     
   }
 
   ngOnInit(): void {
-    this.dataPortfolio.getData().subscribe(data => {
+    this.dataPortfolio.getDataHome().subscribe(data => {
       this.dataHome = data;
     })
   }

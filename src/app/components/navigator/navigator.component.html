@@ -8,7 +8,7 @@
         </div>
         <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
             <!-- se agrega d-lg-non para esconder el nombre en dispositios largos y d-block para que se muestre en dispositivos pequenos-->
-            <span class="h3 fw-bold d-block d-lg-none">{{dataNav.nav.name}}</span>
+            <span class="h3 fw-bold d-block d-lg-none">{{dataNav.name}}</span>
             <img [src]="img" id="foto-perfil" class="d-none d-lg-block rounded-circle" alt="">
         </a>
         <input type="file" accept="image/*" id="input-foto-perfil" (change)="changePhoto($event)" [ngStyle]="{'display': inputDisplay}">

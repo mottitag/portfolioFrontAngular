@@ -3,7 +3,9 @@
 }
 
 .exp-img {
+    display: inline-block;
     width: 70px;
+    margin-right: 220px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -12,6 +14,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .about_ABM-btn {
+    display: inline-flex;
     position: relative;
     padding: 12px;
     cursor: pointer;

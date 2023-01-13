@@ -15,7 +15,10 @@
 
                     <div class="col-12" data-aos="fade-up-right" data-aos-delay="600">
                         <div class="bg-base mb-4 p-4 rounded-4 shadow-effect">
-                            <img class="edu-img" [src]="edu.logo" alt="">
+                            <img class="exp-img" [src]="edu.logo" alt="">
+                            <fa-icon class="about_ABM-btn" [icon]="faPen"></fa-icon>
+                            <fa-icon class="about_ABM-btn" [icon]="faCheck"></fa-icon>
+                            <fa-icon class="about_ABM-btn" (click)="onDeleteEdu(edu)" [icon]="faXmark"></fa-icon>
                             <h4>{{edu.title}}</h4>
                             <p class="text-brand mb-2">{{edu.school}} ({{edu.start}}-{{edu.end}})</p>
                             <p class="mb-0">{{edu.description}}.</p>
@@ -35,7 +38,10 @@
                     <div class="col-12" data-aos="fade-up-left" data-aos-delay="700">
                         <div class="bg-base mb-4 p-4 rounded-4 shadow-effect">
                             <img class="exp-img" [src]="exp.logo" alt="">
-                            <h4>{{exp.name}}</h4>
+                            <fa-icon class="about_ABM-btn" [icon]="faPen"></fa-icon>
+                            <fa-icon class="about_ABM-btn" [icon]="faCheck"></fa-icon>
+                            <fa-icon class="about_ABM-btn" (click)="onDeleteExp(exp)" [icon]="faXmark"></fa-icon>
+                            <h4>{{exp.company}}</h4>
                             <p class="text-brand mb-2">{{exp.position}} ({{exp.start}}-{{exp.end}})</p>
                             <p class="mb-0">{{exp.description}}</p>
                         </div>

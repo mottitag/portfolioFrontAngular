@@ -1,7 +1,7 @@
 {
-    "nav": {
+    "profile": {
         "name": "Gabriel Motta",
-        "foto_perfil": "./assets/img/Img_Mottita.jpeg"
+        "img": "./assets/img/Img_Mottita.jpeg"
     },
     "home": {
         "title": "Hola soy Programador Full Stack Jr. y Analista en Sistemas de Posadas, Misiones (Argentina).",
@@ -9,6 +9,7 @@
         "phone": "(54) 376-4576996"
     },
     "education": [{
+        "id": 1,
         "school": "Universidad Gastón Dachary",
         "title": "Analista en Sistemas",
         "logo": "https://ugd.edu.ar/images/logougd.png",
@@ -17,6 +18,7 @@
         "description": "Creación de sistemas informáticos a medida."
     },
     {
+        "id": 2,
         "school": "Instituto Sagrada Familia",
         "title": "Educación polimodal.",
         "logo": "https://institutosagradafamilia.edu.ar/images/logo-mobile.png",
@@ -26,6 +28,7 @@
     }
     ],
     "experiences": [{
+        "id": 1,
         "name": "Direccion Nacional de Migraciones.",
         "position": "Técnico informático",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Logo_Migraciones.jpg",
@@ -34,6 +37,7 @@
         "description": "Soporte Tecnico, redes informáticas, instalación, configuraciones y mantenimiento de equipos informáticos."
     },
     {
+        "id": 2,
         "name": "Parque centro del conocimiento.",
         "position": "Técnico informático",
         "logo": "https://www.parquedelconocimiento.com/images/logo-mobil-2020-2.png",

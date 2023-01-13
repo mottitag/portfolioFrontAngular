@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+//interface
+import { profile } from '../../portfolio';
+
 //services
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
@@ -16,17 +19,16 @@ export class NavigatorComponent implements OnInit {
   faCheck = faCheck;
   inputDisplay:string = "none";
   img = '';
-  dataNav: any;
+  dataNav!: profile;
   
   constructor(private dataPortfolio:PortfolioService){
 
   }
 
   ngOnInit(): void {
-    this.dataPortfolio.getData().subscribe(data => {
-      console.log(data);
+    this.dataPortfolio.getDataProfile().subscribe(data => {
       this.dataNav = data;
-      this.img = data.nav.foto_perfil;
+      this.img = data.img;
     });
   }
 

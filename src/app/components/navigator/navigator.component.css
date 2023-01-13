@@ -25,7 +25,7 @@ a:hover {
 
 /* para tener imagenes responsivas */
 img {
-    width: 100%;
+    width: 150px;
 }
 .navbar {
     background-color: var(--color-base);
