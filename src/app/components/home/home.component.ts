@@ -5,6 +5,7 @@ import { home } from '../../portfolio'
 // font awesome
 import { faPen, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { HomeService } from 'src/app/services/home.service';
 
 @Component({
   selector: 'app-home',
@@ -18,9 +19,9 @@ export class HomeComponent implements OnInit{
   
   faPen = faPen;
   faCheck = faCheck;
-  dataHome!:home;
+  dataHome: home = {title: "", description: "", phone: ""};
 
-  constructor (private dataPortfolio: PortfolioService, private renderer2: Renderer2) {
+  constructor (private dataPortfolio: HomeService, private renderer2: Renderer2) {
     
   }
 

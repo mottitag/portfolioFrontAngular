@@ -19,7 +19,7 @@ export class NavigatorComponent implements OnInit {
   faCheck = faCheck;
   inputDisplay:string = "none";
   img = '';
-  dataNav!: profile;
+  dataNav: profile = {name: "", img: ""};
   
   constructor(private dataPortfolio:PortfolioService){
 

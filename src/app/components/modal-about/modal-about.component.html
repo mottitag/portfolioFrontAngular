@@ -1,0 +1,42 @@
+<div class="modal fade" id="modalAbout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5">Agregar / Modificar About</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label for="organism" class="col-form-label">{{organism}}:</label>
+                        <input type="text" name="organism" class="form-control" id="organism" [(ngModel)]="place">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tutle" class="col-form-label">{{titulo}}:</label>
+                        <input type="text" name="title" class="form-control" id="title" [(ngModel)]="title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="logo" class="col-form-label">Logo:</label>
+                        <input type="text" name="logo" class="form-control" id="logo" [(ngModel)]="logo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="start" class="col-form-label">Inicio:</label>
+                        <input type="text" name="start" class="form-control" id="start" [(ngModel)]="start">
+                    </div>
+                    <div class="mb-3">
+                        <label for="end" class="col-form-label">Fin:</label>
+                        <input type="text" name="end" class="form-control" id="end" [(ngModel)]="end">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="col-form-label">Descripcion:</label>
+                        <input type="text" name="description" class="form-control" id="description" [(ngModel)]="description">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

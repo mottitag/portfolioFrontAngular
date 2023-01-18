@@ -1,57 +1,55 @@
 <section id="about" class="full-heigth px-lg-5">
     <div class="container">
-
         <div class="row pb-4" data-aos="fade-up">
             <div class="col-lg-8">
                 <h6 class="text-brand">ACERCA DE MI</h6>
                 <h1>Educación y Experiencia.</h1>
             </div>
         </div>
-
         <div class="row gy-5">
             <div class="col-lg-6">
-                <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Educación <fa-icon class="about_ABM-btn" [icon]="faPlus"></fa-icon></h3>
-                <div class="row gy-4" *ngFor="let edu of eduList">
-
-                    <div class="col-12" data-aos="fade-up-right" data-aos-delay="600">
-                        <div class="bg-base mb-4 p-4 rounded-4 shadow-effect">
-                            <img class="exp-img" [src]="edu.logo" alt="">
-                            <fa-icon class="about_ABM-btn" [icon]="faPen"></fa-icon>
-                            <fa-icon class="about_ABM-btn" [icon]="faCheck"></fa-icon>
-                            <fa-icon class="about_ABM-btn" (click)="onDeleteEdu(edu)" [icon]="faXmark"></fa-icon>
-                            <h4>{{edu.title}}</h4>
-                            <p class="text-brand mb-2">{{edu.school}} ({{edu.start}}-{{edu.end}})</p>
-                            <p class="mb-0">{{edu.description}}.</p>
-                        </div>
-                    </div>
-
-                    
+                <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Educación
+                    <fa-icon 
+                        class="about_ABM-btn" 
+                        (click)="toggleModalEdu()" 
+                        [icon]="faPlus"
+                        data-bs-toggle="modal" data-bs-target="#modalAbout">
+                    </fa-icon></h3>
+                <div class="row gy-4">
+                    <app-education
+                        *ngFor="let edu of eduList"
+                        [edu] = "edu"
+                        (onDeleteEdu) = "deleteEdu(edu)"
+                        (onUpdateEdu) = "toggleModEdu(edu)"
+                    >
+                    </app-education>
                 </div>
-
             </div>
-
             <div class="col-lg-6">
-
-                <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Experiencia <fa-icon class="about_ABM-btn" [icon]="faPlus"></fa-icon></h3>
-                <div class="row gy-4" *ngFor="let exp of expList">
-
-                    <div class="col-12" data-aos="fade-up-left" data-aos-delay="700">
-                        <div class="bg-base mb-4 p-4 rounded-4 shadow-effect">
-                            <img class="exp-img" [src]="exp.logo" alt="">
-                            <fa-icon class="about_ABM-btn" [icon]="faPen"></fa-icon>
-                            <fa-icon class="about_ABM-btn" [icon]="faCheck"></fa-icon>
-                            <fa-icon class="about_ABM-btn" (click)="onDeleteExp(exp)" [icon]="faXmark"></fa-icon>
-                            <h4>{{exp.company}}</h4>
-                            <p class="text-brand mb-2">{{exp.position}} ({{exp.start}}-{{exp.end}})</p>
-                            <p class="mb-0">{{exp.description}}</p>
-                        </div>
-                    </div>
-
+                <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Experiencia 
+                    <fa-icon 
+                        class="about_ABM-btn" 
+                        (click)="toggleModalExp()" 
+                        [icon]="faPlus"
+                        data-bs-toggle="modal" data-bs-target="#modalAbout">
+                    </fa-icon></h3>
+                <div class="row gy-4">
+                    <app-experience
+                        *ngFor="let exp of expList"
+                        [exp] = "exp"
+                        (onDeleteExp) = "deleteExp(exp)"
+                        (onUpdateExp) = "toggleModExp(exp)"
+                    ></app-experience>
                 </div>
-
             </div>
-
         </div>
-
     </div>
+    <app-modal-about
+        organism="{{toEduOrExp ? 'Empresa' : 'Instituto'}}"
+        titulo="{{toEduOrExp ? 'Posición' : 'Titulo'}}"
+        (onAddEducation)="addEducation($event)"
+        (onAddExperience)="addExperience($event)"
+        (onModEducation)="modEducation($event)"
+        (onModExperience)="modExperience($event)"
+    ></app-modal-about>
 </section>

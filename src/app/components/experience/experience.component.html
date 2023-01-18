@@ -1,0 +1,17 @@
+<div class="col-12" data-aos="fade-up-left" data-aos-delay="700">
+    <div class="bg-base mb-4 p-4 rounded-4 shadow-effect">
+        <img class="exp-img" [src]="exp.logo" alt="">
+        <fa-icon class="about_ABM-btn" 
+            (click)="onUpdate(exp)" 
+            [icon]="faPen"
+            data-bs-toggle="modal" data-bs-target="#modalAbout">
+        </fa-icon>
+        <fa-icon class="about_ABM-btn" 
+            (click)="onDelete(exp)" 
+            [icon]="faXmark">
+        </fa-icon>
+        <h4>{{exp.company}}</h4>
+        <p class="text-brand mb-2">{{exp.position}} ({{exp.start}}-{{exp.end}})</p>
+        <p class="mb-0">{{exp.description}}</p>
+    </div>
+</div>

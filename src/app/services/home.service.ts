@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 //interface
-import { profile } from '../portfolio';
+import { home } from '../portfolio';
 
 //Http
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -18,14 +18,12 @@ const httpOption = {
 @Injectable({
   providedIn: 'root'
 })
-export class PortfolioService {
-  private apiURLProfile = 'http://localhost:5001/profile';
+export class HomeService {
+  private apiURLHome = 'http://localhost:5001/home'
 
   constructor(private http:HttpClient) { }
 
-  // Get Services
-  getDataProfile(): Observable<profile> {
-    return this.http.get<profile>(this.apiURLProfile);
+  getDataHome(): Observable<home> {
+    return this.http.get<home>(this.apiURLHome);
   }
-
 }
