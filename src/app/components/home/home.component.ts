@@ -4,8 +4,7 @@ import { home } from '../../portfolio'
 
 // font awesome
 import { faPen, faCheck } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioService } from 'src/app/services/portfolio.service';
-import { HomeService } from 'src/app/services/home.service';
+import { HomeService } from 'src/app/services/persistence/home.service';
 
 @Component({
   selector: 'app-home',

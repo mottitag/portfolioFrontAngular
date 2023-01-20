@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { profile } from '../../portfolio';
 
 //services
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { PortfolioService } from 'src/app/services/persistence/portfolio.service';
 
 // Font awesome
 import { faPen, faCheck } from '@fortawesome/free-solid-svg-icons';

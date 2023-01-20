@@ -1,56 +1,27 @@
 <section class="full-heigth px-lg-5" id="skills">
-    <div class="container-skills">
-        <div class="card">
-            <div class="percent" style="--clr:#f6940b; --num:85;">
-                <div class="dot"></div>
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <h2>85<span>%</span></h2>
-                    <p>HTML</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="percent" style="--clr:#0478fc; --num:70;">
-                <div class="dot"></div>
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <h2>70<span>%</span></h2>
-                    <p>CSS</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="percent" style="--clr:#fc2d04; --num:50;">
-                <div class="dot"></div>
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <h2>50<span>%</span></h2>
-                    <p>Angular</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="percent" style="--clr:#f6940b; --num:85;">
-                <div class="dot"></div>
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <h2>85<span>%</span></h2>
-                    <p>My SQL</p>
-                </div>
-            </div>
+    <div class="row pb-4" data-aos="fade-up">
+        <div class="col-lg-8">
+            <h6>Habilidades.
+            <fa-icon 
+                class="skill_ABM-btn" 
+                (click)="toggleModalSkill()" 
+                [icon]="faPlus"
+                data-bs-toggle="modal" data-bs-target="#modalSkill">
+            </fa-icon></h6>
         </div>
     </div>
+    <div class="container-skills" data-aos="fade-up">
+        <app-skill-item
+        *ngFor="let skill of skills"
+        [skill] = "skill"
+        (onDeleteSkill) = "deleteSkill(skill)"
+        (onUpdateSkill) = "toggleModSkill(skill)"
+        >
+        </app-skill-item>
+    </div>
+    <app-modal-skill
+    (onAddSkill)="addSkill($event)"
+    (onModSkill)="modSkill($event)"
+    >
+    </app-modal-skill>
 </section>

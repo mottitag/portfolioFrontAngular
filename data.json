@@ -47,5 +47,31 @@
       "end": "2013",
       "description": "Soporte Tecnico, redes informáticas, instalación, configuraciones y mantenimiento de serviores."
     }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "skill": "html",
+      "percent": 85,
+      "color": "#f6940b"
+    },
+    {
+      "id": 2,
+      "skill": "css",
+      "percent": 70,
+      "color": "#0478fc"
+    },
+    {
+      "id": 3,
+      "skill": "angular",
+      "percent": 50,
+      "color": "#fc2d04"
+    },
+    {
+      "id": 4,
+      "skill": "my sql",
+      "percent": 85,
+      "color": "#f6940b"
+    }
   ]
 }

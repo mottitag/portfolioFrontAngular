@@ -1,0 +1,30 @@
+<div class="modal fade" id="modalSkill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5">Agregar / Modificar Habilidad</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label for="skill" class="col-form-label">Habilidad:</label>
+                        <input type="text" name="skill" class="form-control" id="skill" [(ngModel)]="skill">
+                    </div>
+                    <div class="mb-3">
+                        <label for="percent" class="col-form-label">porcentaje:</label>
+                        <input type="number" name="percent" class="form-control" id="percent" [(ngModel)]="percent">
+                    </div>
+                    <div class="mb-3">
+                        <label for="color" class="col-form-label">color:</label>
+                        <input type="color" name="color" class="form-control" id="color" [(ngModel)]="color">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

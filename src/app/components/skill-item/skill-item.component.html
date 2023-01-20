@@ -1,0 +1,22 @@
+<div class="card">
+    <fa-icon class="skill_ABM-btn" 
+            (click)="onUpdate(skill)" 
+            [icon]="faPen" 
+            data-bs-toggle="modal" data-bs-target="#modalSkill">
+        </fa-icon>
+        <fa-icon class="skill_ABM-btn" 
+            (click)="onDelete(skill)" 
+            [icon]="faXmark">
+        </fa-icon>
+    <div class="percent" style="--clr:{{skill.color}}; --num:{{skill.percent}};">
+        <div class="dot"></div>
+        <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70"></circle>
+        </svg>
+        <div class="number">
+            <h2>{{skill.percent}}<span>%</span></h2>
+            <p>{{skill.skill}}</p>
+        </div>
+    </div>
+</div>

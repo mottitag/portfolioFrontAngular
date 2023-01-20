@@ -28,3 +28,10 @@ export interface experiences {
     end: string;
     description: string;
 }
+
+export interface skill {
+    id?: number
+    skill: string
+    percent: number
+    color: string
+}

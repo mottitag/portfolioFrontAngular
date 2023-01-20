@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { UiModalService } from 'src/app/services/ui-modal.service';
-import { EducationService } from 'src/app/services/education.service';
-import { ExperienceService } from 'src/app/services/experience.service';
+import { UiModalService } from 'src/app/services/ui/ui-modal.service';
+import { EducationService } from 'src/app/services/persistence/education.service';
+import { ExperienceService } from 'src/app/services/persistence/experience.service';
 
 // interfaces
 import { education, experiences } from '../../portfolio';
@@ -29,14 +29,7 @@ export class AboutComponent implements OnInit {
   // false to Add and true to Modify
   toAddOrMod: boolean = false;
 
-  constructor(private dataEdu:EducationService, private dataExp:ExperienceService, private uiService:UiModalService) {
-    this.subscription = this.uiService.onToggle().subscribe(value => {
-      this.toEduOrExp = value;
-    });
-    this.subscription2 = this.uiService.onToggleAdd().subscribe(value2 => {
-      this.toAddOrMod = value2;
-    });
-  }
+  constructor(private dataEdu:EducationService, private dataExp:ExperienceService, private uiService:UiModalService) {}
   
   ngOnInit(): void {
     this.dataEdu.getDataEducation().subscribe(dataEdu => {

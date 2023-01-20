@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 //interface
-import { education } from '../portfolio';
+import { education } from '../../portfolio';
 
 //Http
 import { HttpClient, HttpHeaders } from '@angular/common/http';

@@ -1,8 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { education, experiences } from '../../portfolio'
-import { UiModalService } from 'src/app/services/ui-modal.service';
+import { UiModalService } from 'src/app/services/ui/ui-modal.service';
 import { Subscription } from 'rxjs';
-import { faThemeisle } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-modal-about',
@@ -23,9 +22,7 @@ export class ModalAboutComponent {
   subEdu?: Subscription;
   subExp?: Subscription;
 
-  // To get a edu or exp object.
-  @Input() edu?: education;
-  @Input() exp?: experiences;
+  
   @Input() organism: string = "";
   @Input() titulo: string = ";"
 
