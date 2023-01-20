@@ -26,4 +26,8 @@ export class HomeService {
   getDataHome(): Observable<home> {
     return this.http.get<home>(this.apiURLHome);
   }
+  
+  updateHome(dato: home): Observable<home> {
+    return this.http.put<home>(this.apiURLHome, dato, httpOption);
+  }
 }

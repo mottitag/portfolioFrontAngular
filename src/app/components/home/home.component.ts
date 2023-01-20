@@ -36,7 +36,10 @@ export class HomeComponent implements OnInit{
   }
 
   closeEditH1(): void{
+    this.dataHome.title = this.title.nativeElement.textContent;
+    this.dataPortfolio.updateHome(this.dataHome).subscribe( () => {
     this.renderer2.setAttribute(this.title.nativeElement, 'contentEditable', 'false');
+    });
   }
 
   editP(): void {
@@ -45,7 +48,10 @@ export class HomeComponent implements OnInit{
   }
 
   closeEditP(): void {
-    this.renderer2.setAttribute(this.paragraph.nativeElement, 'contentEditable', 'false');
+    this.dataHome.description = this.paragraph.nativeElement.textContent;
+    this.dataPortfolio.updateHome(this.dataHome).subscribe( () => {
+      this.renderer2.setAttribute(this.paragraph.nativeElement, 'contentEditable', 'false');
+    });
   }
 
   editPhone(): void {
@@ -54,7 +60,10 @@ export class HomeComponent implements OnInit{
   }
 
   closeEditPhone(): void {
-    this.renderer2.setAttribute(this.phone.nativeElement, 'contentEditable', 'false');
+    this.dataHome.phone = this.phone.nativeElement.textContent;
+    this.dataPortfolio.updateHome(this.dataHome).subscribe( () => {
+      this.renderer2.setAttribute(this.phone.nativeElement, 'contentEditable', 'false');
+    })
   }
 
 }
