@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 // font awesome
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -22,6 +23,11 @@ export class SkillsComponent {
   skills: skill[] = [];
   subscription?: Subscription;
   toAddOrMod: boolean = false;
+
+  //is in de view?
+  @ViewChild('skillDiv', { static: false })
+  private skillDiv?: ElementRef<HTMLDivElement>;
+  isIntoView: boolean = false;
 
   constructor(private dataSkill:SkillService, private uiSkill: UiModalSkillService) {}
 
@@ -61,6 +67,20 @@ export class SkillsComponent {
 
   toggleModalSkill (){
     this.uiSkill.toggleModalAddSkill();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  isScrolledIntoView() {
+    if (this.skillDiv) {
+      const rect = this.skillDiv.nativeElement.getBoundingClientRect();
+      const topShown = rect.top >= 0;
+      const bottomShown = rect.bottom <= window.innerHeight;
+      this.isIntoView = topShown && bottomShown;
+    }
+  }
+
+  drop (event: CdkDragDrop<skill[]>){
+    moveItemInArray(this.skills, event.previousIndex, event.currentIndex)
   }
 
 }

@@ -1,6 +1,6 @@
 <section class="full-heigth px-lg-5" id="skills">
     <div class="row pb-4" data-aos="fade-up">
-        <div class="col-lg-8">
+        <div #skillDiv class="col-lg-8">
             <h6>Habilidades.
             <fa-icon 
                 class="skill_ABM-btn" 
@@ -10,14 +10,20 @@
             </fa-icon></h6>
         </div>
     </div>
-    <div class="container-skills" data-aos="fade-up">
-        <app-skill-item
-        *ngFor="let skill of skills"
-        [skill] = "skill"
-        (onDeleteSkill) = "deleteSkill(skill)"
-        (onUpdateSkill) = "toggleModSkill(skill)"
+    <div class="container-skills"  data-aos="fade-up"
+        cdkDropList
+        (cdkDropListDropped)="drop($event)"
         >
-        </app-skill-item>
+        <div class="continer-skills"
+            *ngFor="let skill of skills"
+            cdkDrag>
+            <app-skill-item
+                [skill] = "skill"
+                (onDeleteSkill) = "deleteSkill(skill)"
+                (onUpdateSkill) = "toggleModSkill(skill)"
+            >
+            </app-skill-item>
+        </div>
     </div>
     <app-modal-skill
     (onAddSkill)="addSkill($event)"
