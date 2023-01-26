@@ -22,6 +22,7 @@ export class SkillService {
   private apiURLSkill = 'http://localhost:5001/skills'
 
   constructor(private http:HttpClient) { }
+  
   getSkill(): Observable<skill[]> {
     return this.http.get<skill[]>(this.apiURLSkill);
   }

@@ -1,0 +1,33 @@
+<section class="full-heigth px-lg-5" id="skills">
+    <div class="row pb-4" data-aos="fade-up">
+        <div #skillDiv class="col-lg-8">
+            <h6>Habilidades.
+            <fa-icon 
+                class="skill_ABM-btn" 
+                (click)="toggleModalSkill()" 
+                [icon]="faPlus"
+                data-bs-toggle="modal" data-bs-target="#modalSkill">
+            </fa-icon></h6>
+        </div>
+    </div>
+    <div *ngIf="isIntoView"  class="container-skills"  data-aos="fade-up"
+        cdkDropList
+        (cdkDropListDropped)="drop($event)"
+        >
+        <div class="continer-skills"
+            *ngFor="let skill of skills"
+            cdkDrag>
+            <app-skill-item
+                [skill] = "skill"
+                (onDeleteSkill) = "deleteSkill(skill)"
+                (onUpdateSkill) = "toggleModSkill(skill)"
+            >
+            </app-skill-item>
+        </div>
+    </div>
+    <app-modal-skill
+        (onAddSkill)="addSkill($event)"
+        (onModSkill)="modSkill($event)"
+    >
+    </app-modal-skill>
+</section>

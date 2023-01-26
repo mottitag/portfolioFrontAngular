@@ -15,14 +15,20 @@
                         [icon]="faPlus"
                         data-bs-toggle="modal" data-bs-target="#modalAbout">
                     </fa-icon></h3>
-                <div class="row gy-4">
-                    <app-education
-                        *ngFor="let edu of eduList"
-                        [edu] = "edu"
-                        (onDeleteEdu) = "deleteEdu(edu)"
-                        (onUpdateEdu) = "toggleModEdu(edu)"
+                <div cdkDropList
+                    (cdkDropListDropped)="drop($event)"
                     >
-                    </app-education>
+                    <div class="row gy-4"
+                        *ngFor="let edu of eduList"
+                        cdkDrag
+                        >
+                        <app-education
+                            [edu] = "edu"
+                            (onDeleteEdu) = "deleteEdu(edu)"
+                            (onUpdateEdu) = "toggleModEdu(edu)"
+                        >
+                        </app-education>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -33,13 +39,18 @@
                         [icon]="faPlus"
                         data-bs-toggle="modal" data-bs-target="#modalAbout">
                     </fa-icon></h3>
-                <div class="row gy-4">
-                    <app-experience
-                        *ngFor="let exp of expList"
-                        [exp] = "exp"
-                        (onDeleteExp) = "deleteExp(exp)"
-                        (onUpdateExp) = "toggleModExp(exp)"
-                    ></app-experience>
+                <div cdkDropList
+                    (cdkDropListDropped)="drop($event)"
+                    >
+                    <div class="row gy-4"
+                    *ngFor="let exp of expList"
+                    cdkDrag>
+                        <app-experience
+                            [exp] = "exp"
+                            (onDeleteExp) = "deleteExp(exp)"
+                            (onUpdateExp) = "toggleModExp(exp)"
+                        ></app-experience>
+                    </div>
                 </div>
             </div>
         </div>

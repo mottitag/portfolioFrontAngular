@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
@@ -6,7 +7,7 @@ import { EducationService } from 'src/app/services/persistence/education.service
 import { ExperienceService } from 'src/app/services/persistence/experience.service';
 
 // interfaces
-import { education, experiences } from '../../portfolio';
+import { education, experiences } from '../../../portfolio';
 
 // font awesome
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -103,6 +104,11 @@ export class AboutComponent implements OnInit {
 
   toggleModExp(exp: experiences){
     this.uiService.toggleModalModExp(exp);
+  }
+
+  //DRAG AND DROP
+  drop (event: CdkDragDrop<education[]>){
+    moveItemInArray(this.eduList, event.previousIndex, event.currentIndex)
   }
 
 }

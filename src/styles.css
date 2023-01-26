@@ -239,6 +239,7 @@ el contenido quede centrado y dividido en columnas las secciones */
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .container-skills .card .percent {

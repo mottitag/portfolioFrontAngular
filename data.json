@@ -48,6 +48,15 @@
       "description": "Soporte Tecnico, redes informáticas, instalación, configuraciones y mantenimiento de serviores."
     }
   ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Mi portfolio web.",
+      "photo": "./assets/img/img_banner.jpg",
+      "url": "#",
+      "description": ">Creacion de mi propiop portfolio web full stack, utilizando tecnologia HTML5, CSS, ANGULAR, GIT, GITHUB, GITFLOW, SCRUM, JAVA SPRING BOOT, MYSQL y seguridad JWT."
+    }
+  ],
   "skills": [
     {
       "id": 1,
