@@ -21,11 +21,11 @@ export class SkillItemComponent {
 
   constructor(){}
 
-  onDelete(aSkill: skill){
+  onDelete(aSkill: skill): void{
     this.onDeleteSkill.emit(aSkill);
   }
 
-  onUpdate(aSkill: skill){
+  onUpdate(aSkill: skill): void{
     this.onUpdateSkill.emit(aSkill);
   }
 

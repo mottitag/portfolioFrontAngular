@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 //interface
-import { profile } from '../../portfolio';
+import { profile } from '../../../portfolio';
 
 //services
 import { PortfolioService } from 'src/app/services/persistence/portfolio.service';

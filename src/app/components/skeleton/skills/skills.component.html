@@ -10,7 +10,7 @@
             </fa-icon></h6>
         </div>
     </div>
-    <div class="container-skills"  data-aos="fade-up"
+    <div *ngIf="isIntoView"  class="container-skills"  data-aos="fade-up"
         cdkDropList
         (cdkDropListDropped)="drop($event)"
         >
@@ -26,8 +26,8 @@
         </div>
     </div>
     <app-modal-skill
-    (onAddSkill)="addSkill($event)"
-    (onModSkill)="modSkill($event)"
+        (onAddSkill)="addSkill($event)"
+        (onModSkill)="modSkill($event)"
     >
     </app-modal-skill>
 </section>

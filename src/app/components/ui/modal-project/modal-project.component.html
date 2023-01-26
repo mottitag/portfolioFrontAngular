@@ -1,0 +1,34 @@
+<div class="modal fade" id="modalProject" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5">Agregar / Modificar Proyecto</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label for="name" class="col-form-label">Proyecto:</label>
+                        <input type="text" name="name" class="form-control" id="name" [(ngModel)]="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="urlPhoto" class="col-form-label">URL foto:</label>
+                        <input type="text" name="urlPhoto" class="form-control" id="urlPhoto" [(ngModel)]="urlPhoto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="urlLink" class="col-form-label">URL enlace:</label>
+                        <input type="text" name="urlLink" class="form-control" id="urlLink" [(ngModel)]="urlLink">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="col-form-label">Descripción</label>
+                        <input type="text" name="description" class="form-control" id="description" [(ngModel)]="description">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

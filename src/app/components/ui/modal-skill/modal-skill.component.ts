@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { UiModalSkillService } from 'src/app/services/ui/ui-modal-skill.service';
 
 // Interface
-import { skill } from '../../portfolio';
+import { skill } from '../../../portfolio';
 
 @Component({
   selector: 'app-modal-skill',
@@ -33,7 +33,7 @@ export class ModalSkillComponent {
       this.skill = aSkill.skill;
       this.percent = aSkill.percent;
       this.color = aSkill.color;
-    })
+    });
   } 
 
   onSubmit() {

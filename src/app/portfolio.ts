@@ -30,8 +30,16 @@ export interface experiences {
 }
 
 export interface skill {
-    id?: number
-    skill: string
-    percent: number
-    color: string
+    id?: number;
+    skill: string;
+    percent: number;
+    color: string;
+}
+
+export interface project {
+    id?: number;
+    name: string;
+    photo: string;
+    url: string;
+    description: string;
 }

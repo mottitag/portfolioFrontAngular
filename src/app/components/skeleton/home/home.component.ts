@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 
-import { home } from '../../portfolio'
+import { home } from '../../../portfolio'
 
 // font awesome
 import { faPen, faCheck } from '@fortawesome/free-solid-svg-icons';

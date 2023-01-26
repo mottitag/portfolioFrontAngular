@@ -1,0 +1,34 @@
+<section id="proyects" class="full-heigth px-lg-5">
+    <div class="container">
+
+        <div class="row pb-4" data-aos="fade-up">
+            <div class="col-lg-8">
+                <h6 class="text-brand">PROYECTOS</h6>
+                <h1>Mis proyectos recientes.
+                    <fa-icon
+                        class="project_ABM-btn"
+                        (click)="toggleModalProject()"
+                        [icon]="faPlus"
+                        data-bs-toggle="modal" data-bs-target="#modalProject">
+                    </fa-icon>
+                </h1>
+            </div>
+        </div>
+        <div data-aos="fade-up"
+            cdkDropList
+            (cdkDropListDropped)="drop($event)">
+            <div *ngFor="let pro of projects"
+            cdkDrag>
+                <app-project-item
+                    [project] = "pro"
+                    (onDeleteProject) = "deleteProject(pro)"
+                    (onUpdateProject) = "toggleModProject(pro)">
+                </app-project-item>
+            </div>
+        </div>
+    </div>
+    <app-modal-project
+        (onAddProject) = "addProject($event)"
+        (onModProject) = "modProject($event)">
+    </app-modal-project>
+</section>

@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { education, experiences } from '../../portfolio'
+import { education, experiences } from '../../../portfolio'
 import { UiModalService } from 'src/app/services/ui/ui-modal.service';
 import { Subscription } from 'rxjs';
 
