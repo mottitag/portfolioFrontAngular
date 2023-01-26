@@ -29,7 +29,6 @@ export class ProjectComponent {
   ngOnInit(): void {
     this.dataProject.getProject().subscribe(projectList => {
       this.projects = projectList;
-      console.log(this.projects);
     });
   }
 

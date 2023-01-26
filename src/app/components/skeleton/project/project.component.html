@@ -14,11 +14,11 @@
                 </h1>
             </div>
         </div>
-        <div data-aos="fade-up"
+        <div  data-aos="fade-up"
             cdkDropList
             (cdkDropListDropped)="drop($event)">
-            <div *ngFor="let pro of projects"
-            cdkDrag>
+            <div class="row py-4" *ngFor="let pro of projects"
+                cdkDrag>
                 <app-project-item
                     [project] = "pro"
                     (onDeleteProject) = "deleteProject(pro)"

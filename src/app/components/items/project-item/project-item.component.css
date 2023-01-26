@@ -1,8 +1,7 @@
 .project_ABM-btn {
     cursor: pointer;
     margin-left: 2px;
-    position: static;
-    align-items:flex-end;
+    position: relative;
     justify-content: flex-end;
     display: flex;
 }

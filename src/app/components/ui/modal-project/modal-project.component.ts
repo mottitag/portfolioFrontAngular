@@ -51,9 +51,9 @@ export class ModalProjectComponent {
       description: this.description
     };
     if (this.toAddOrMod){
-      this.onAddProject.emit(newElement);
-    }else {
       this.onModProject.emit(newElement);
+    }else {
+      this.onAddProject.emit(newElement);
     }
   }
 
