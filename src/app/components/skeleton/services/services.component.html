@@ -1,48 +1,35 @@
 <section id="services" class="full-heigth px-lg-5">
     <div class="container">
-
         <div class="row pb-4" data-aos="fade-up">
             <div class="col-lg-8">
                 <h6 class="text-brand">SERVICIOS</h6>
-                <h1>Servicios que ofresco</h1>
+                <h1>Servicios que ofresco
+                    <fa-icon
+                        class="service_ABM-btn"
+                        (click)="toggleModalService()"
+                        [icon]="faPlus"
+                        data-bs-toggle="modal" data-bs-target="#modalService"
+                    >
+                    </fa-icon>
+                </h1>
             </div>
         </div>
-
-        <div class="row py-4">
-
-            <div class="col-md-4 mt-2" data-aos="fade-up">
-                <div class="services p-4 bg-base rounded-4 shadow-effect">
-                    <div class="iconbox rounded-4">
-                        <fa-icon [icon]="faLaptopCode"></fa-icon>
-                    </div>
-                    <h5 class="mt-4 mb-2">Diseno Web</h5>
-                    <p>Realizo disenos web Front End intuitivos y responsivos para que se adapten a cualquier dispositivos</p>
-                    <a href="#" class="link-custom">Conozca más</a>
-                </div>
-            </div>
-
-            <div class="col-md-4 mt-2" data-aos="fade-up" data-aos-delay="300">
-                <div class="services p-4 bg-base rounded-4 shadow-effect">
-                    <div class="iconbox rounded-4">
-                        <fa-icon [icon]="faFeather"></fa-icon>
-                    </div>
-                    <h5 class="mt-4 mb-2">Diseno Web</h5>
-                    <p>Realizo disenos web Front End intuitivos y responsivos para que se adapten a cualquier dispositivos</p>
-                    <a href="#" class="link-custom">Conozca más</a>
-                </div>
-            </div>
-
-            <div class="col-md-4 mt-2" data-aos="fade-up" data-aos-delay="600">
-                <div class="services p-4 bg-base rounded-4 shadow-effect">
-                    <div class="iconbox rounded-4">
-                        <fa-icon [icon]="faFeather"></fa-icon>
-                    </div>
-                    <h5 class="mt-4 mb-2">Diseno Web</h5>
-                    <p>Realizo disenos web Front End intuitivos y responsivos para que se adapten a cualquier dispositivos</p>
-                    <a href="#" class="link-custom">Conozca más</a>
-                </div>
+        <div class="row py-4" data-aos="fade-up"
+            cdkDropList
+            (cdkDropListDropped)="drop($event)"
+        >
+            <div *ngFor="let ser of services"
+                cdkDrag>
+                <app-service-item
+                    [service] = "ser"
+                    (onDeleteService) = "deleteService(ser)"
+                    (onUpdateService) = "toggleModService(ser)">
+                </app-service-item>
             </div>
         </div>
-
     </div>
+    <app-modal-service
+        (onAddService)="addService($event)"
+        (onModService)="modService($event)">
+    </app-modal-service>
 </section>

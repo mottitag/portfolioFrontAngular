@@ -28,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http'
 
 // font awesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ServiceItemComponent } from './components/items/service-item/service-item.component';
+import { ModalServiceComponent } from './components/ui/modal-service/modal-service.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ModalSkillComponent,
     ProjectItemComponent,
     ModalProjectComponent,
+    ServiceItemComponent,
+    ModalServiceComponent,
   ],
   imports: [
     AppRoutingModule,

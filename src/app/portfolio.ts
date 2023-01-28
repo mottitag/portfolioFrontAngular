@@ -29,6 +29,12 @@ export interface experiences {
     description: string;
 }
 
+export interface service {
+    id?: number;
+    name: string;
+    description: string;
+}
+
 export interface skill {
     id?: number;
     skill: string;

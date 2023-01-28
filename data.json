@@ -33,7 +33,7 @@
       "id": 1,
       "company": "Técnico informático analista",
       "position": "Técnico informático ",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Logo_Migraciones.jpg",
+      "logo": "http://www.migraciones.gov.ar/radex/images/logo_dnm.jpg",
       "start": "2013",
       "end": "Actualidad",
       "description": "Soporte Tecnico, redes informáticas, instalación, configuraciones y mantenimiento de equipos informáticos."
@@ -55,6 +55,23 @@
       "photo": "./assets/img/img_banner.jpg",
       "url": "#",
       "description": ">Creacion de mi propiop portfolio web full stack, utilizando tecnologia HTML5, CSS, ANGULAR, GIT, GITHUB, GITFLOW, SCRUM, JAVA SPRING BOOT, MYSQL y seguridad JWT."
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Trabajos Front-end",
+      "description": "Realizo diseños web Front End intuitivos y responsivos para que se adapten a cualquier dispositivos."
+    },
+    {
+      "id": 2,
+      "name": "Trabajos Back-end",
+      "description": "Sistemas web con  manejo de Bases de Datos para que tu sitio web te pueda ayudar más en la administración de tu negocio."
+    },
+    {
+      "id": 3,
+      "name": "Trabajos Full-Stack",
+      "description": "Trabajos desde 0 en tu sitio web para desarrollar un sistema a medida a tus necesidades combinando los dos servicios anteriores."
     }
   ],
   "skills": [

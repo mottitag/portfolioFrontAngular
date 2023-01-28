@@ -1,0 +1,21 @@
+<div class="col-md-4 mt-2" data-aos="fade-up">
+    <div class="services p-4 bg-base rounded-4 shadow-effect">
+        <div class="service_ABM-btn">
+            <fa-icon class="icon_ABM"
+                (click)="onUpdate(service)"
+                [icon]="faPen"
+                data-bs-toggle="modal" data-bs-target="#modalService">
+            </fa-icon>
+            <fa-icon class="icon_ABM"
+                (click)="onDelete(service)"
+                [icon]="faXmark">
+            </fa-icon>
+        </div>
+        <div class="iconbox rounded-4">
+            <fa-icon [icon]="faLaptopCode"></fa-icon>
+        </div>
+        <h5 class="mt-4 mb-2">{{service.name}}</h5>
+        <p>{{service.description}}</p>
+        <a href="#" class="link-custom">Conozca más</a>
+    </div>
+</div>

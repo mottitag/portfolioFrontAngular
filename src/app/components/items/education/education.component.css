@@ -8,9 +8,14 @@
     margin-right: 220px;
 }
 
-.about_ABM-btn {
-    display: inline-flex;
-    position: relative;
-    padding: 12px;
+.about_ABM-btn{
     cursor: pointer;
+    position: relative;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.about_ABM-btn .icon_ABM {
+    display: inline-block;
+    margin: 2px;
 }

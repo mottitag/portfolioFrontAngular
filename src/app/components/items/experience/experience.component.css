@@ -9,8 +9,9 @@
 }
 
 .about_ABM-btn {
-    display: inline-flex;
-    position: relative;
-    padding: 12px;
     cursor: pointer;
+    margin-left: 2px;
+    position: relative;
+    justify-content: flex-end;
+    display: flex;
 }

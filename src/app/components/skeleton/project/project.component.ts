@@ -68,8 +68,8 @@ export class ProjectComponent {
 
 
   //DRAG AND DROP
-  drop (event: CdkDragDrop<project[]>){
-    moveItemInArray(this.projects, event.previousIndex, event.currentIndex)
+  drop (event: CdkDragDrop<project[]>): void{
+    moveItemInArray(this.projects, event.previousIndex, event.currentIndex);
   }
 
 }

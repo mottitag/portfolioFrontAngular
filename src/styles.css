@@ -235,7 +235,7 @@ el contenido quede centrado y dividido en columnas las secciones */
     position: relative;
     width: 220px;
     height: 250px;
-    background: #2a2a2a;
+    background: var(--color-base2);
     display: flex;
     justify-content: center;
     align-items: center;
