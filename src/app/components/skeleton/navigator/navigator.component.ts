@@ -25,7 +25,7 @@ export class NavigatorComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.dataPortfolio.getDataProfile().subscribe(data => {
       this.dataNav = data;
       this.img = data.img;

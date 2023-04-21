@@ -17,9 +17,10 @@
         <div  data-aos="fade-up"
             cdkDropList
             (cdkDropListDropped)="drop($event)">
-            <div class="row py-4" *ngFor="let pro of projects"
+            <div class="row py-4" *ngFor="let pro of projects; trackBy: trackByItem"
                 cdkDrag>
                 <app-project-item
+                    class="col-md-4 mt-1" data-aos="fade-up"
                     [project] = "pro"
                     (onDeleteProject) = "deleteProject(pro)"
                     (onUpdateProject) = "toggleModProject(pro)">

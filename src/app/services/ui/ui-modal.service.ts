@@ -11,8 +11,8 @@ export class UiModalService {
   // add false and mod true
   private toAddOrMod: boolean = false;
 
-  private education: education = {school: "", title: "", logo: "", start: "", end: "", description: ""};
-  private experience: experiences = {company: "", position: "", logo: "", start: "", end: "", description: ""};
+  private education: education = {school: "", title: "", logo: "", startDate: "", endDate: "", description: ""};
+  private experience: experiences = {company: "", position: "", logo: "", startDate: "", endDate: "", description: ""};
 
   private subject = new Subject<any>();
   private subject2 = new Subject<any>();
@@ -24,7 +24,7 @@ export class UiModalService {
   toggleModalAddEdu(): void {
     this.toEduOrExp = false;
     this.toAddOrMod = false;
-    this.education = {school: "", title: "", logo: "", start: "", end: "", description: ""};
+    this.education = {school: "", title: "", logo: "", startDate: "", endDate: "", description: ""};
     this.subject.next(this.toEduOrExp);
     this.subject2.next(this.toAddOrMod);
     this.subEducation.next(this.education);
@@ -33,7 +33,7 @@ export class UiModalService {
   toggleModalAddExp(): void {
     this.toEduOrExp = true;
     this.toAddOrMod = false;
-    this.experience = {company: "", position: "", logo: "", start: "", end: "", description: ""};
+    this.experience = {company: "", position: "", logo: "", startDate: "", endDate: "", description: ""};
     this.subject.next(this.toEduOrExp);
     this.subject2.next(this.toAddOrMod);
     this.subExperience.next(this.experience);

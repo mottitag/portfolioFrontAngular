@@ -44,7 +44,6 @@ export class ProjectComponent {
         if (p.id == aProject.id) {
           p.description = aProject.description;
           p.name = aProject.name;
-          p.url = aProject.url;
           p.photo = aProject.photo;
         }
       });
@@ -70,6 +69,11 @@ export class ProjectComponent {
   //DRAG AND DROP
   drop (event: CdkDragDrop<project[]>): void{
     moveItemInArray(this.projects, event.previousIndex, event.currentIndex);
+  }
+
+  //Track by of NgFor to better DOM render
+  trackByItem(index: number, item:any): number {
+    return item.id;
   }
 
 }

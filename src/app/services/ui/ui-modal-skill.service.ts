@@ -9,7 +9,7 @@ export class UiModalSkillService {
   // add false and mod true
   private toAddOrMod: boolean = false;
 
-  private skill: skill = {skill: "", color: "", percent: 0};
+  private skill: skill = {name: "", color: "", percent: 0};
 
   private subject = new Subject<any>();
   private subSkill = new Subject<any>();
@@ -18,7 +18,7 @@ export class UiModalSkillService {
 
   toggleModalAddSkill(): void {
     this.toAddOrMod = false;
-    this.skill ={skill: "", color: "", percent: 0};
+    this.skill ={name: "", color: "", percent: 0};
     this.subject.next(this.toAddOrMod);
     this.subSkill.next(this.skill);
   }

@@ -18,7 +18,7 @@
             cdkDropList
             (cdkDropListDropped)="drop($event)"
         >
-            <div *ngFor="let ser of services"
+            <div *ngFor="let ser of services; trackBy: trackByItem"
                 cdkDrag>
                 <app-service-item
                     [service] = "ser"

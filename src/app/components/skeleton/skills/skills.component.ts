@@ -1,5 +1,5 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 // font awesome
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -17,7 +17,7 @@ import { skill } from '../../../portfolio';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit, OnDestroy {
 
   faPlus = faPlus;
   skills: skill[] = [];
@@ -32,6 +32,10 @@ export class SkillsComponent {
   constructor(private dataSkill:SkillService, private uiSkill: UiModalSkillService) {}
 
   ngOnInit(): void {
+    this.getSkills();
+  }
+
+  getSkills(): void {
     this.dataSkill.getSkill().subscribe(skillList => {
       this.skills = skillList;
     });
@@ -49,7 +53,7 @@ export class SkillsComponent {
         if (s.id == aSkill.id){
           s.color = aSkill.color;
           s.percent = aSkill.percent;
-          s.skill = aSkill.skill;
+          s.name = aSkill.name;
         }
       });
     });
@@ -84,4 +88,13 @@ export class SkillsComponent {
     moveItemInArray(this.skills, event.previousIndex, event.currentIndex)
   }
 
+  trackByItem(index: number, item:any): number {
+    return item.id;
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscription){
+      this.subscription.unsubscribe();
+    }
+  }
 }

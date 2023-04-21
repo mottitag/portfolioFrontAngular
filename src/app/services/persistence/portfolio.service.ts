@@ -19,13 +19,13 @@ const httpOption = {
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiURLProfile = 'http://localhost:5001/profile';
+  private apiURLProfile = 'http://localhost:8080/per';
 
   constructor(private http:HttpClient) { }
 
   // Get Services
   getDataProfile(): Observable<profile> {
-    return this.http.get<profile>(this.apiURLProfile);
+    return this.http.get<profile>(`${this.apiURLProfile}/bringProf/1`);
   }
 
 }

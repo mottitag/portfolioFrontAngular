@@ -20,25 +20,26 @@ const httpOption = {
   providedIn: 'root'
 })
 export class ServiceService {
-  private apiURLServices = 'http://localhost:5001/services';
+  private apiURLServices = 'http://localhost:8080/serv';
+  private apiURLAddServ = 'http://localhost:8080/per/newServ/1';
 
   constructor(private http: HttpClient) { }
 
   getService(): Observable<service[]> {
-    return this.http.get<service[]>(this.apiURLServices);
+    return this.http.get<service[]>(`${this.apiURLServices}/bring`);
   }
 
   addService(aService: service): Observable<service> {
-    return this.http.post<service>(this.apiURLServices, aService, httpOption);
+    return this.http.post<service>(this.apiURLAddServ, aService, httpOption);
   }
 
   updateService(aService: service): Observable<service> {
-    const url = `${this.apiURLServices}/${aService.id}`;
+    const url = `${this.apiURLServices}/update/${aService.id}`;
     return this.http.put<service>(url, aService, httpOption);
   }
 
   deleteService(aService: service): Observable<service> {
-    const url = `${this.apiURLServices}/${aService.id}`;
+    const url = `${this.apiURLServices}/del/${aService.id}`;
     return this.http.delete<service>(url);
   }
 }

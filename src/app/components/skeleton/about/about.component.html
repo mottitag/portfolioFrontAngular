@@ -19,7 +19,7 @@
                     (cdkDropListDropped)="drop($event)"
                     >
                     <div class="row gy-4"
-                        *ngFor="let edu of eduList"
+                        *ngFor="let edu of eduList; trackBy: trackByItem"
                         cdkDrag
                         >
                         <app-education
@@ -43,7 +43,7 @@
                     (cdkDropListDropped)="drop($event)"
                     >
                     <div class="row gy-4"
-                    *ngFor="let exp of expList"
+                    *ngFor="let exp of expList; trackBy: trackByItem"
                     cdkDrag>
                         <app-experience
                             [exp] = "exp"

@@ -14,9 +14,10 @@ export interface education {
     school: string;
     title: string;
     logo?: string;
-    start: string;
-    end: string;
     description: string;
+    isActualy?: boolean;
+    startDate: string;
+    endDate: string;
 }
 
 export interface experiences {
@@ -24,9 +25,10 @@ export interface experiences {
     company: string;
     position: string;
     logo?: string;
-    start: string;
-    end: string;
     description: string;
+    isActualy?: boolean;
+    startDate: string;
+    endDate: string;
 }
 
 export interface service {
@@ -37,7 +39,7 @@ export interface service {
 
 export interface skill {
     id?: number;
-    skill: string;
+    name: string;
     percent: number;
     color: string;
 }
@@ -46,6 +48,5 @@ export interface project {
     id?: number;
     name: string;
     photo: string;
-    url: string;
     description: string;
 }

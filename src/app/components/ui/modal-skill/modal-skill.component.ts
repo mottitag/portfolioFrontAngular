@@ -13,7 +13,7 @@ import { skill } from '../../../portfolio';
 })
 export class ModalSkillComponent {
   id?: number;
-  skill: string = "";
+  name: string = "";
   color: string = "";
   percent: number = 0;
   toAddOrMod: boolean = false;
@@ -30,21 +30,21 @@ export class ModalSkillComponent {
     });
     this.subSkill = this.uiService.onToggleModSkill().subscribe(aSkill => {
       this.id = aSkill.id;
-      this.skill = aSkill.skill;
+      this.name = aSkill.name;
       this.percent = aSkill.percent;
       this.color = aSkill.color;
     });
   } 
 
   onSubmit() {
-    if (this.skill.length === 0 || this.color.length === 0 ||
+    if (this.name.length === 0 || this.color.length === 0 ||
         this.percent === 0 ){
         alert("Debe completar todos los campos");
         return
     }
     const newElement = {
       id: this.id,
-      skill: this.skill,
+      name: this.name,
       percent: this.percent,
       color: this.color
     };

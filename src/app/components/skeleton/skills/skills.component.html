@@ -15,7 +15,7 @@
         (cdkDropListDropped)="drop($event)"
         >
         <div class="continer-skills"
-            *ngFor="let skill of skills"
+            *ngFor="let skill of skills; trackBy: trackByItem"
             cdkDrag>
             <app-skill-item
                 [skill] = "skill"

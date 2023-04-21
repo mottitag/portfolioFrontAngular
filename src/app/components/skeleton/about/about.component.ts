@@ -68,9 +68,9 @@ export class AboutComponent implements OnInit {
     this.eduList.forEach(e => {
       if (e.id == edu.id){
         e.description = edu.description;
-        e.end = edu.end;
+        e.endDate = edu.endDate;
         e.school = edu.school;
-        e.start = edu.start;
+        e.startDate = edu.startDate;
         e.title = edu.title;
       }
     })
@@ -81,9 +81,9 @@ export class AboutComponent implements OnInit {
     this.expList.forEach(e => {
       if (e.id = exp.id){
         e.description = exp.description;
-        e.end = exp.end;
+        e.endDate = exp.endDate;
         e.company = exp.position;
-        e.start = exp.start;
+        e.startDate = exp.startDate;
         e.position = exp.position;
       }
     })
@@ -109,6 +109,11 @@ export class AboutComponent implements OnInit {
   //DRAG AND DROP
   drop (event: CdkDragDrop<education[]>){
     moveItemInArray(this.eduList, event.previousIndex, event.currentIndex)
+  }
+
+  //Track by of NgFor to better DOM render
+  trackByItem(index: number, item:any): number {
+    return item.id;
   }
 
 }

@@ -69,4 +69,8 @@ export class ServicesComponent {
     moveItemInArray(this.services, event.previousIndex, event.currentIndex);
   }
 
+  //Track by of NgFor to better DOM render
+  trackByItem(index: number, item:any): number {
+    return item.id;
+  }
 }

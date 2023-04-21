@@ -79,9 +79,10 @@ export class ModalAboutComponent {
         company: this.place,
         position: this.title,
         logo: this.logo,
-        start: this.start,
-        end: this.end,
-        description: this.description
+        description: this.description,
+        isActualy: false,
+        startDate: this.start,
+        endDate: this.end,
       };
       if (this.toAddOrMod){
         this.onModExperience.emit(newElement);
@@ -94,9 +95,10 @@ export class ModalAboutComponent {
         school: this.place,
         title: this.title,
         logo: this.logo,
-        start: this.start,
-        end: this.end,
-        description: this.description
+        description: this.description,
+        isActualy: false,
+        startDate: this.start,
+        endDate: this.end
       };
       if (this.toAddOrMod){
         this.onModEducation.emit(newElement);

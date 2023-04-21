@@ -10,7 +10,7 @@ export class UiModalProjectService {
   //add false and mod true
   private toAddOrMod: boolean = false;
 
-  private project: project = {name: "", url: "", photo: "", description: ""};
+  private project: project = {name: "", photo: "", description: ""};
 
   private subject = new Subject<any>();
   private subProject = new Subject<any>();
@@ -19,7 +19,7 @@ export class UiModalProjectService {
 
   toggleModalAddProject(): void {
     this.toAddOrMod = false;
-    this.project = {name: "", url: "", photo: "", description: ""};
+    this.project = {name: "", photo: "", description: ""};
     this.subject.next(this.toAddOrMod);
     this.subProject.next(this.project);
   }
