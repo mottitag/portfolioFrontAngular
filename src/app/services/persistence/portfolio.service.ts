@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 //interface
-import { profile } from '../../portfolio';
+import { profile, dirBackend } from '../../portfolio';
 
 //Http
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -19,13 +19,13 @@ const httpOption = {
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiURLProfile = 'http://localhost:8080/per';
+  private apiURLProfile = dirBackend.apiURL + 'per';
 
   constructor(private http:HttpClient) { }
 
   // Get Services
   getDataProfile(): Observable<profile> {
-    return this.http.get<profile>(`${this.apiURLProfile}/bringProf/1`);
+    return this.http.get<profile>(`${this.apiURLProfile}/bringProf/${dirBackend.idPersona}`);
   }
 
 }

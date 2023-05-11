@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 //interface
-import { skill } from '../../portfolio';
+import { skill, dirBackend } from '../../portfolio';
 
 //Http
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -19,8 +19,8 @@ const httpOption = {
   providedIn: 'root'
 })
 export class SkillService {
-  private apiURLSkill = 'http://localhost:8080/skill';
-  private apiURLAddSkill = 'http://localhost:8080/per/newSkill/1';
+  private apiURLSkill = dirBackend.apiURL + 'skill';
+  private apiURLAddSkill = dirBackend.apiURL + 'per/newSkill/' + dirBackend.idPersona;
 
   constructor(private http:HttpClient) { }
   

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 //interface
-import { experiences } from '../../portfolio';
+import { experiences, dirBackend } from '../../portfolio';
 
 //Http
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -19,8 +19,8 @@ const httpOption = {
   providedIn: 'root'
 })
 export class ExperienceService {
-  private apiURLExperiences = 'http://localhost:8080/exp';
-  private apiURLAddExp = 'http://localhost:8080/per/newExp/1';
+  private apiURLExperiences = dirBackend.apiURL + 'exp';
+  private apiURLAddExp = dirBackend.apiURL + 'per/newExp/' + dirBackend.idPersona;
 
   constructor(private http:HttpClient) { }
 

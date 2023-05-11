@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 //interface
-import { education } from '../../portfolio';
+import { education, dirBackend } from '../../portfolio';
 
 //Http
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -18,8 +18,8 @@ const httpOption = {
   providedIn: 'root'
 })
 export class EducationService {
-  private apiURLEducation = 'http://localhost:8080/edu'
-  private apuURLAddEdu = 'http://localhost:8080/per/newEdu/1'
+  private apiURLEducation = dirBackend.apiURL + 'per';
+  private apuURLAddEdu = dirBackend.apiURL + 'per/newEdu/' + dirBackend.idPersona;
 
   constructor(private http:HttpClient) { }
 

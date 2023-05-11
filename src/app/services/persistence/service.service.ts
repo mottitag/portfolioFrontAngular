@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 //interface
-import { service } from 'src/app/portfolio';
+import { service, dirBackend } from 'src/app/portfolio';
 
 // http
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -20,8 +20,8 @@ const httpOption = {
   providedIn: 'root'
 })
 export class ServiceService {
-  private apiURLServices = 'http://localhost:8080/serv';
-  private apiURLAddServ = 'http://localhost:8080/per/newServ/1';
+  private apiURLServices = dirBackend.apiURL + 'serv';
+  private apiURLAddServ = dirBackend.apiURL + 'per/newServ/' + dirBackend.idPersona;
 
   constructor(private http: HttpClient) { }
 

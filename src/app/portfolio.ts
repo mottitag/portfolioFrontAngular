@@ -50,3 +50,8 @@ export interface project {
     photo: string;
     description: string;
 }
+
+export const dirBackend = {
+    apiURL: "https://portfolio-backend-yh5v.onrender.com/",
+    idPersona: 1
+}

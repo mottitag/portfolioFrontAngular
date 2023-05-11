@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/angular-pfmottita",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

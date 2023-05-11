@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 //interface
-import { project } from '../../portfolio';
+import { project, dirBackend } from '../../portfolio';
 
 //Http
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -20,8 +20,8 @@ const httpOption = {
 })
 export class ProjectService {
 
-  private apiURLProject = 'http://localhost:8080/pro';
-  private apiURLAddPro = 'http://localhost:8080/per/newPro/1';
+  private apiURLProject = dirBackend.apiURL + 'pro';
+  private apiURLAddPro = dirBackend.apiURL + '/per/newPro/' + dirBackend.idPersona;
 
   constructor(private http: HttpClient) {}
 
