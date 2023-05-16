@@ -18,7 +18,7 @@ const httpOption = {
   providedIn: 'root'
 })
 export class EducationService {
-  private apiURLEducation = dirBackend.apiURL + 'per';
+  private apiURLEducation = dirBackend.apiURL + 'edu';
   private apuURLAddEdu = dirBackend.apiURL + 'per/newEdu/' + dirBackend.idPersona;
 
   constructor(private http:HttpClient) { }
