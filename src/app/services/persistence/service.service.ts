@@ -12,7 +12,7 @@ import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 
 const httpOption = {
   headers: new HttpHeaders({
-    'content-type': 'applications/json'
+    'content-type':'application/json'
   })
 }
 
@@ -20,8 +20,8 @@ const httpOption = {
   providedIn: 'root'
 })
 export class ServiceService {
-  private apiURLServices = dirBackend.apiURL + 'serv';
-  private apiURLAddServ = dirBackend.apiURL + 'per/newServ/' + dirBackend.idPersona;
+  private apiURLServices = dirBackend.apiUrlCrud + 'serv';
+  private apiURLAddServ = dirBackend.apiUrlCrud + 'per/newServ/' + dirBackend.idPersona;
 
   constructor(private http: HttpClient) { }
 

@@ -10,6 +10,7 @@
             <div class="col-lg-6">
                 <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Educación
                     <fa-icon 
+                        *ngIf="isAdmin"
                         class="about_ABM-btn" 
                         (click)="toggleModalEdu()" 
                         [icon]="faPlus"
@@ -19,11 +20,12 @@
                     (cdkDropListDropped)="drop($event)"
                     >
                     <div class="row gy-4"
-                        *ngFor="let edu of eduList; trackBy: trackByItem"
+                        *ngFor="let edu of eduList"
                         cdkDrag
                         >
                         <app-education
                             [edu] = "edu"
+                            [isAdmin] = "isAdmin"
                             (onDeleteEdu) = "deleteEdu(edu)"
                             (onUpdateEdu) = "toggleModEdu(edu)"
                         >
@@ -34,6 +36,7 @@
             <div class="col-lg-6">
                 <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Experiencia 
                     <fa-icon 
+                        *ngIf="isAdmin"
                         class="about_ABM-btn" 
                         (click)="toggleModalExp()" 
                         [icon]="faPlus"
@@ -43,10 +46,11 @@
                     (cdkDropListDropped)="drop($event)"
                     >
                     <div class="row gy-4"
-                    *ngFor="let exp of expList; trackBy: trackByItem"
+                    *ngFor="let exp of expList"
                     cdkDrag>
                         <app-experience
                             [exp] = "exp"
+                            [isAdmin] = "isAdmin"
                             (onDeleteExp) = "deleteExp(exp)"
                             (onUpdateExp) = "toggleModExp(exp)"
                         ></app-experience>

@@ -12,6 +12,7 @@ import { faPen, faXmark } from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./skill-item.component.css']
 })
 export class SkillItemComponent {
+  @Input() isAdmin!:boolean;
   @Input() skill!: skill;
   @Output() onDeleteSkill: EventEmitter<skill> = new EventEmitter;
   @Output() onUpdateSkill: EventEmitter<skill> = new EventEmitter;

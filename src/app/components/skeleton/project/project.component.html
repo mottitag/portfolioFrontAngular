@@ -6,6 +6,7 @@
                 <h6 class="text-brand">PROYECTOS</h6>
                 <h1>Mis proyectos recientes.
                     <fa-icon
+                        *ngIf="isAdmin"
                         class="project_ABM-btn"
                         (click)="toggleModalProject()"
                         [icon]="faPlus"
@@ -17,11 +18,12 @@
         <div  data-aos="fade-up"
             cdkDropList
             (cdkDropListDropped)="drop($event)">
-            <div class="row py-4" *ngFor="let pro of projects; trackBy: trackByItem"
+            <div class="row py-4" *ngFor="let pro of projects"
                 cdkDrag>
                 <app-project-item
                     class="col-md-4 mt-1" data-aos="fade-up"
                     [project] = "pro"
+                    [isAdmin] = "isAdmin"
                     (onDeleteProject) = "deleteProject(pro)"
                     (onUpdateProject) = "toggleModProject(pro)">
                 </app-project-item>

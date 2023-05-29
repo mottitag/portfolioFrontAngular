@@ -1,5 +1,5 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 // font awesome
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -19,7 +19,7 @@ import { service } from 'src/app/portfolio';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent {
-
+  @Input() isAdmin!:boolean;
   faPlus = faPlus;
   services: service[] = [];
   subscription?: Subscription;
@@ -67,10 +67,5 @@ export class ServicesComponent {
   //Drag and Drop
   drop (event: CdkDragDrop<service[]>): void {
     moveItemInArray(this.services, event.previousIndex, event.currentIndex);
-  }
-
-  //Track by of NgFor to better DOM render
-  trackByItem(index: number, item:any): number {
-    return item.id;
   }
 }

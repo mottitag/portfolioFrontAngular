@@ -12,6 +12,7 @@ import {faPen, faXmark} from '@fortawesome/free-solid-svg-icons'
 })
 export class EducationComponent {
   @Input() edu!: education;
+  @Input() isAdmin!:boolean;
   @Output() onDeleteEdu: EventEmitter<education> = new EventEmitter;
   @Output() onUpdateEdu: EventEmitter<education> = new EventEmitter;
 

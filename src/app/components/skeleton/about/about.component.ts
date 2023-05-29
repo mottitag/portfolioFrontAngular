@@ -1,5 +1,5 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { UiModalService } from 'src/app/services/ui/ui-modal.service';
@@ -19,6 +19,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  @Input() isAdmin!:boolean;
   faPlus = faPlus;
   eduList: education[] = [];
   expList: experiences[] = [];
@@ -82,7 +83,7 @@ export class AboutComponent implements OnInit {
       if (e.id = exp.id){
         e.description = exp.description;
         e.endDate = exp.endDate;
-        e.company = exp.position;
+        e.company = exp.company;
         e.startDate = exp.startDate;
         e.position = exp.position;
       }
@@ -109,11 +110,6 @@ export class AboutComponent implements OnInit {
   //DRAG AND DROP
   drop (event: CdkDragDrop<education[]>){
     moveItemInArray(this.eduList, event.previousIndex, event.currentIndex)
-  }
-
-  //Track by of NgFor to better DOM render
-  trackByItem(index: number, item:any): number {
-    return item.id;
   }
 
 }

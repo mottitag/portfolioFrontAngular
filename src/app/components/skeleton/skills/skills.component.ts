@@ -1,5 +1,5 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 // font awesome
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,7 @@ import { skill } from '../../../portfolio';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit, OnDestroy {
-
+  @Input() isAdmin!:boolean;
   faPlus = faPlus;
   skills: skill[] = [];
   subscription?: Subscription;
@@ -86,10 +86,6 @@ export class SkillsComponent implements OnInit, OnDestroy {
   //DRAG AND DROP
   drop (event: CdkDragDrop<skill[]>){
     moveItemInArray(this.skills, event.previousIndex, event.currentIndex)
-  }
-
-  trackByItem(index: number, item:any): number {
-    return item.id;
   }
 
   ngOnDestroy(): void {

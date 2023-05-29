@@ -1,6 +1,6 @@
 export interface profile {
     name: string;
-    img: string;
+    photo: string;
 }
 
 export interface home {
@@ -48,10 +48,19 @@ export interface project {
     id?: number;
     name: string;
     photo: string;
+    url: string;
     description: string;
 }
 
 export const dirBackend = {
-    apiURL: "https://portfolio-backend-yh5v.onrender.com/",
-    idPersona: 1
+    apiURLAuth: "http://localhost:8080/api/auth/",
+    apiUrlCrud: "http://localhost:8080/api/crud/",
+    idPersona: 2
+}
+
+export class jwtDto {
+    accessToken!: string;
+    tokenType!: string;
+    username!: string;
+    authorities!: string[];
 }

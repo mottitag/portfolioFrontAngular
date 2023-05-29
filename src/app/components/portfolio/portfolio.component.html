@@ -1,0 +1,48 @@
+<!-- BARRA DE NAVEGACION LATERAL BOOTSTRAP 5 -->
+<app-navigator
+    [isAdmin]="isAdmin">
+</app-navigator>
+<!-- //BARRA DE NAVEGACION LATERAL BOOSTRAP 5 -->
+<!-- CONTENIDO PRINCIPAL -->
+<div id="content-wrapper">
+
+    <!-- INICIO -->
+    <app-home
+        [isAdmin]="isAdmin">
+    </app-home>
+    <!-- //INICIO -->
+
+    <!-- WORK-->
+    <app-project
+        [isAdmin]="isAdmin">
+    </app-project>
+    <!-- //WORK -->
+
+    <!-- ABOUT -->
+    <app-about
+        [isAdmin]="isAdmin">
+    </app-about>
+    <!-- //ABOUT -->
+
+    <!-- SERVICIOS -->
+    <app-services
+        [isAdmin]="isAdmin">
+    </app-services>
+    <!-- //SERVICIOS -->
+
+    <!-- HABILIDADES -->
+    <app-skills
+        [isAdmin]="isAdmin">
+    </app-skills>
+    <!-- //HABILIDADES -->
+
+    <!-- CONTACTO-->
+    <app-contact></app-contact>
+    <!-- //CONTACTO -->
+
+    <!-- FOOTER -->
+    <app-footer></app-footer>
+    <!-- //fOOTER -->
+
+</div>
+<!-- //CONTENIDO PRINCIPAL -->

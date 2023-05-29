@@ -11,6 +11,7 @@ import {faPen, faXmark} from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
+  @Input() isAdmin!:boolean;
   @Input() exp!: experiences;
   @Output() onDeleteExp: EventEmitter<experiences> = new EventEmitter;
   @Output() onUpdateExp: EventEmitter<experiences> = new EventEmitter;

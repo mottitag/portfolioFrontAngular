@@ -1,6 +1,6 @@
 <div class="col-12" data-aos="fade-up-right" data-aos-delay="600">
     <div class="bg-base mb-4 p-4 rounded-4 shadow-effect">
-        <div class="about_ABM-btn">
+        <div *ngIf="isAdmin" class="about_ABM-btn">
             <fa-icon class="icon_ABM" 
                 (click)="onUpdate(edu)" 
                 [icon]="faPen" 

@@ -2,14 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10">
-                <div class="home_ABM" data-aos="fade-up">
+                <div *ngIf="isAdmin" class="home_ABM" data-aos="fade-up">
                     <fa-icon class="home_ABM-btn" (click)="editH1()" [icon]="faPen"></fa-icon>
                     <fa-icon class="home_ABM-btn" (click)="closeEditH1()"  [icon]="faCheck"></fa-icon>
                 </div>
                 <h1 id="home_h1" class="display-4 fw-bold"  data-aos="fade-up">
                     <span #title class="text-brand">{{dataHome.title}}</span>
                 </h1>
-                <div class="home_ABM" data-aos="fade-up" data-aos-delay="300">
+                <div *ngIf="isAdmin" class="home_ABM" data-aos="fade-up" data-aos-delay="300">
                     <fa-icon class="home_ABM-btn" (click)="editP()" [icon]="faPen"></fa-icon>
                     <fa-icon class="home_ABM-btn" (click)="closeEditP()" [icon]="faCheck"></fa-icon>
                 </div>
@@ -20,7 +20,7 @@
                     <a href="#" #phone class="link-custom">
                         Comuniquese: {{dataHome.phone}}
                     </a>
-                    <div class="home_ABM">
+                    <div *ngIf="isAdmin" class="home_ABM">
                         <fa-icon class="home_ABM-btn" (click)="editPhone()" [icon]="faPen"></fa-icon>
                         <fa-icon class="home_ABM-btn" (click)="closeEditPhone()" [icon]="faCheck"></fa-icon>
                     </div>

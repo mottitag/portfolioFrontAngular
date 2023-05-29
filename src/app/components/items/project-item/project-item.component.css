@@ -5,3 +5,8 @@
     justify-content: flex-end;
     display: flex;
 }
+
+.project_ABM-btn .icon_ABM {
+    display: inline-block;
+    margin: 2px;
+}

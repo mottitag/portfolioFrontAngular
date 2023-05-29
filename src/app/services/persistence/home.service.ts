@@ -19,7 +19,7 @@ const httpOption = {
   providedIn: 'root'
 })
 export class HomeService {
-  private apiURLHome = dirBackend.apiURL + 'per';
+  private apiURLHome = dirBackend.apiUrlCrud + 'per';
 
   constructor(private http:HttpClient) { }
 

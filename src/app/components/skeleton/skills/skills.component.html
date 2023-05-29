@@ -3,6 +3,7 @@
         <div #skillDiv class="col-lg-8">
             <h6>Habilidades.
             <fa-icon 
+                *ngIf="isAdmin"
                 class="skill_ABM-btn" 
                 (click)="toggleModalSkill()" 
                 [icon]="faPlus"
@@ -15,10 +16,11 @@
         (cdkDropListDropped)="drop($event)"
         >
         <div class="continer-skills"
-            *ngFor="let skill of skills; trackBy: trackByItem"
+            *ngFor="let skill of skills"
             cdkDrag>
             <app-skill-item
                 [skill] = "skill"
+                [isAdmin] = "isAdmin"
                 (onDeleteSkill) = "deleteSkill(skill)"
                 (onUpdateSkill) = "toggleModSkill(skill)"
             >

@@ -19,8 +19,8 @@ const httpOption = {
   providedIn: 'root'
 })
 export class SkillService {
-  private apiURLSkill = dirBackend.apiURL + 'skill';
-  private apiURLAddSkill = dirBackend.apiURL + 'per/newSkill/' + dirBackend.idPersona;
+  private apiURLSkill = dirBackend.apiUrlCrud + 'skill';
+  private apiURLAddSkill = dirBackend.apiUrlCrud + 'per/newSkill/' + dirBackend.idPersona;
 
   constructor(private http:HttpClient) { }
   

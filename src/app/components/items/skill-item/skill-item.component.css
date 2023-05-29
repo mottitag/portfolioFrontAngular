@@ -1,3 +1,11 @@
 .skill_ABM-btn {
     cursor: pointer;
+    position: relative;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.skill_ABM-btn .icon_ABM {
+    display: inline-block;
+    margin: 2px;
 }

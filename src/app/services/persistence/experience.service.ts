@@ -19,8 +19,8 @@ const httpOption = {
   providedIn: 'root'
 })
 export class ExperienceService {
-  private apiURLExperiences = dirBackend.apiURL + 'exp';
-  private apiURLAddExp = dirBackend.apiURL + 'per/newExp/' + dirBackend.idPersona;
+  private apiURLExperiences = dirBackend.apiUrlCrud + 'exp';
+  private apiURLAddExp = dirBackend.apiUrlCrud + 'per/newExp/' + dirBackend.idPersona;
 
   constructor(private http:HttpClient) { }
 

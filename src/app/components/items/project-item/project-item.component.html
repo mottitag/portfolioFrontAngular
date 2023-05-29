@@ -1,14 +1,16 @@
 
     <div class="card-custom rounded-4 bg-base shadow-effect">
-        <fa-icon class="project_ABM-btn"
-            (click)="onUpdate(project)"
-            [icon]="faPen"
-            data-bs-toggle="modal" data-bs-target="#modalProject">
-        </fa-icon>
-        <fa-icon class="project_ABM-btn"
-            (click)="onDelete(project)"
-            [icon]="faXmark">
-        </fa-icon>
+        <div *ngIf="isAdmin" class="project_ABM-btn">
+            <fa-icon class="icon_ABM"
+                (click)="onUpdate(project)"
+                [icon]="faPen"
+                data-bs-toggle="modal" data-bs-target="#modalProject">
+            </fa-icon>
+            <fa-icon class="icon_ABM"
+                (click)="onDelete(project)"
+                [icon]="faXmark">
+            </fa-icon>
+        </div>
         <div class="card-custom-image rounded-4">
             <img class="rounded-4" [src]="project.photo" alt="">
         </div>

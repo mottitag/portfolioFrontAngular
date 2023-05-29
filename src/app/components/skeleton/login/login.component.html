@@ -1,0 +1,39 @@
+<div class="ap_logo">
+    <img src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1676134779/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2817%29.png" alt="logo_ap">
+</div>
+<div class="login">
+    <h2 class="m-5">Iniciar Sesión</h2>
+    <form [formGroup]="form" class="m-5" (ngSubmit)="onSubmit($event)">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input type="text" formControlName="username"
+            [ngClass]="{'is-invalid': Username?.errors && Username?.touched,
+                        'is-valid': !Username?.errors && !Username?.touched}"
+            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div *ngIf="Username?.errors && Username?.touched">
+                <p *ngIf="Username?.hasError('required')" class="text-danger">
+                    the username is required
+                </p>
+                <p *ngIf="Username?.errors?.['minlength']" class="text-danger">
+                    Username min length must be 4
+                </p>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" formControlName="password" 
+            [ngClass]="{'is-invalid': Password?.errors && Password?.touched,
+                        'is-valid': !Password?.errors && !Password?.touched}"
+            class="form-control" id="exampleInputPassword1">
+            <div *ngIf="Password?.errors && Password?.touched">
+                <p *ngIf="Password?.hasError('required')" class="text-danger">
+                    the username is required
+                </p>
+                <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+                    Username min length must be 8
+                </p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -19,7 +19,7 @@ const httpOption = {
   providedIn: 'root'
 })
 export class PortfolioService {
-  private apiURLProfile = dirBackend.apiURL + 'per';
+  private apiURLProfile = dirBackend.apiUrlCrud + 'per';
 
   constructor(private http:HttpClient) { }
 

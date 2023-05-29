@@ -15,3 +15,8 @@
     justify-content: flex-end;
     display: flex;
 }
+
+.about_ABM-btn .icon_ABM {
+    display: inline-block;
+    margin: 2px;
+}

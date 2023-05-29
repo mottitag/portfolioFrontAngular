@@ -20,8 +20,8 @@ const httpOption = {
 })
 export class ProjectService {
 
-  private apiURLProject = dirBackend.apiURL + 'pro';
-  private apiURLAddPro = dirBackend.apiURL + '/per/newPro/' + dirBackend.idPersona;
+  private apiURLProject = dirBackend.apiUrlCrud + 'pro';
+  private apiURLAddPro = dirBackend.apiUrlCrud + 'per/newPro/' + dirBackend.idPersona;
 
   constructor(private http: HttpClient) {}
 

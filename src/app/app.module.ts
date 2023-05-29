@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppComponent } from './app.component';
@@ -24,12 +24,22 @@ import { SkillsComponent } from './components/skeleton/skills/skills.component';
 import { SkillItemComponent } from './components/items/skill-item/skill-item.component';
 
 // http
-import { HttpClientModule } from '@angular/common/http'
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 
 // font awesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ServiceItemComponent } from './components/items/service-item/service-item.component';
 import { ModalServiceComponent } from './components/ui/modal-service/modal-service.component';
+import { LoginComponent } from './components/skeleton/login/login.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { EducationService } from './services/persistence/education.service';
+import { InterceptorService } from './services/auth/interceptor.service';
+import { ExperienceService } from './services/persistence/experience.service';
+import { HomeService } from './services/persistence/home.service';
+import { PortfolioService } from './services/persistence/portfolio.service';
+import { ProjectService } from './services/persistence/project.service';
+import { ServiceService } from './services/persistence/service.service';
+import { SkillService } from './services/persistence/skill.service';
 
 @NgModule({
   declarations: [
@@ -51,6 +61,8 @@ import { ModalServiceComponent } from './components/ui/modal-service/modal-servi
     ModalProjectComponent,
     ServiceItemComponent,
     ModalServiceComponent,
+    LoginComponent,
+    PortfolioComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -58,9 +70,12 @@ import { ModalServiceComponent } from './components/ui/modal-service/modal-servi
     DragDropModule,
     FontAwesomeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

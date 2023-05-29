@@ -12,7 +12,7 @@ import { faPen, faXmark } from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./project-item.component.css']
 })
 export class ProjectItemComponent {
-
+  @Input() isAdmin!:boolean;
   @Input() project!: project;
   @Output() onDeleteProject: EventEmitter<project> = new EventEmitter;
   @Output() onUpdateProject: EventEmitter<project> = new EventEmitter;

@@ -1,5 +1,5 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 // font awesome
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,7 @@ import { project } from '../../../portfolio';
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent {
-
+  @Input() isAdmin!:boolean;
   faPlus = faPlus;
   projects: project[] = [];
   suscription?: Subscription;
@@ -33,7 +33,9 @@ export class ProjectComponent {
   }
 
   addProject(aProject: project): void {
+    console.log("Esto es lo que contiene aProject: " + aProject);
     this.dataProject.addProject(aProject).subscribe(p => {
+      console.log("Esto es lo que contiene p: " + p)
       this.projects.push(p);
     });
   }
@@ -44,6 +46,7 @@ export class ProjectComponent {
         if (p.id == aProject.id) {
           p.description = aProject.description;
           p.name = aProject.name;
+          p.url = aProject.url;
           p.photo = aProject.photo;
         }
       });
@@ -69,11 +72,6 @@ export class ProjectComponent {
   //DRAG AND DROP
   drop (event: CdkDragDrop<project[]>): void{
     moveItemInArray(this.projects, event.previousIndex, event.currentIndex);
-  }
-
-  //Track by of NgFor to better DOM render
-  trackByItem(index: number, item:any): number {
-    return item.id;
   }
 
 }

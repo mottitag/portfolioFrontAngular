@@ -24,7 +24,7 @@ export class ModalAboutComponent {
 
   
   @Input() organism: string = "";
-  @Input() titulo: string = ";"
+  @Input() titulo: string = "";
 
   // To emit a event
   @Output() onAddEducation: EventEmitter<education> = new EventEmitter();
@@ -80,7 +80,6 @@ export class ModalAboutComponent {
         position: this.title,
         logo: this.logo,
         description: this.description,
-        isActualy: false,
         startDate: this.start,
         endDate: this.end,
       };
@@ -96,7 +95,6 @@ export class ModalAboutComponent {
         title: this.title,
         logo: this.logo,
         description: this.description,
-        isActualy: false,
         startDate: this.start,
         endDate: this.end
       };

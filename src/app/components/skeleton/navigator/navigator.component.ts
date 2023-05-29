@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 //interface
 import { profile } from '../../../portfolio';
@@ -8,6 +8,10 @@ import { PortfolioService } from 'src/app/services/persistence/portfolio.service
 
 // Font awesome
 import { faPen, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { AuthenticationService } from 'src/app/services/auth/authentication.service';
+import { Router } from '@angular/router';
+
+const AUTHORITIES_KEY = 'AuthAuthorities';
 
 @Component({
   selector: 'app-navigator',
@@ -19,16 +23,17 @@ export class NavigatorComponent implements OnInit {
   faCheck = faCheck;
   inputDisplay:string = "none";
   img = '';
-  dataNav: profile = {name: "", img: ""};
+  dataNav: profile = {name: "", photo: ""};
+  @Input() isAdmin!:boolean;
   
-  constructor(private dataPortfolio:PortfolioService){
+  constructor(private dataPortfolio:PortfolioService, private auth: AuthenticationService, private route: Router){
 
   }
 
   ngOnInit() {
     this.dataPortfolio.getDataProfile().subscribe(data => {
       this.dataNav = data;
-      this.img = data.img;
+      this.img = data.photo;
     });
   }
 
@@ -54,6 +59,11 @@ export class NavigatorComponent implements OnInit {
         reader.readAsDataURL(currentFile);
       }
     }
+  }
+
+  onLogout(): void {
+    this.auth.logout();
+    this.route.navigate(['/login']);
   }
 
 }

@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <!-- se agrega el atributo flex para cambiar la barra de navegacion a vertical -->
     <div class="container flex-lg-column">
-        <div class="navbar_abm-btn d-none d-lg-block">
+        <div *ngIf="isAdmin" class="navbar_abm-btn d-none d-lg-block">
             <fa-icon class="navbar_modify-icon" [icon]="faPen" (click)="editPhoto()"></fa-icon>
             <fa-icon class="navbar_modify-icon" [icon]="faCheck" (click)="closeFile()" ></fa-icon>
         </div>
@@ -39,7 +39,7 @@
                     <a class="nav-link" href="#contact">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#login">Login</a>
+                    <a class="nav-link" (click)="onLogout()">Logout</a>
                 </li>
             </ul>
         </div>

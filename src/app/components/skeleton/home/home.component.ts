@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 import { home } from '../../../portfolio'
 
@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit{
   @ViewChild('title', {static: true}) public title!: ElementRef;
   @ViewChild('paragraph', {static: true}) public paragraph!: ElementRef;
   @ViewChild('phone', {static: true}) public phone!: ElementRef;
+  @Input() isAdmin!:boolean;
   
   faPen = faPen;
   faCheck = faCheck;

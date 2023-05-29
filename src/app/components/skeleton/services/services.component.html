@@ -5,6 +5,7 @@
                 <h6 class="text-brand">SERVICIOS</h6>
                 <h1>Servicios que ofresco
                     <fa-icon
+                        *ngIf="isAdmin"
                         class="service_ABM-btn"
                         (click)="toggleModalService()"
                         [icon]="faPlus"
@@ -18,10 +19,11 @@
             cdkDropList
             (cdkDropListDropped)="drop($event)"
         >
-            <div *ngFor="let ser of services; trackBy: trackByItem"
+            <div *ngFor="let ser of services"
                 cdkDrag>
                 <app-service-item
                     [service] = "ser"
+                    [isAdmin] = "isAdmin"
                     (onDeleteService) = "deleteService(ser)"
                     (onUpdateService) = "toggleModService(ser)">
                 </app-service-item>

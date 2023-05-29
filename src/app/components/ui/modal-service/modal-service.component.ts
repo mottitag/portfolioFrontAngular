@@ -43,6 +43,7 @@ export class ModalServiceComponent {
       name: this.name,
       description: this.description
     };
+    console.log("Servicio para enviar a base de datos: " + newElement)
     if (this.toAddOrMod){
       this.onModService.emit(newElement);
     }else {
