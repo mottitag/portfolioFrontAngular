@@ -53,9 +53,9 @@ export interface project {
 }
 
 export const dirBackend = {
-    apiURLAuth: "http://localhost:8080/api/auth/",
-    apiUrlCrud: "http://localhost:8080/api/crud/",
-    idPersona: 2
+    apiURLAuth: "https://portfolio-backend-yh5v.onrender.com/api/auth/",
+    apiUrlCrud: "https://portfolio-backend-yh5v.onrender.com/api/crud/",
+    idPersona: 1
 }
 
 export class jwtDto {
